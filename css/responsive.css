@@ -1,0 +1,452 @@
+/*
+Style sheet
+Created by Ayesha Bashir
+*/
+/*
+***************************************************************
+Screen Size max-1280px
+***************************************************************
+*/
+@media (max-width: 1280px) {
+    ul.nav-bar li a, .nav__footer ul li button {
+        letter-spacing: 1px;
+    }
+    section.navigation-section {
+        height: 100vh;
+    }
+    .nav__footer {
+        bottom: 60px;
+        width: 91%;
+    }
+    .modal__body {
+        height: 650px;
+    }
+    .home__page__bottom__section {
+        margin: 100px 0 50px;
+    }
+    .modal__body.settingPopup-body {
+        height: 670px;
+        padding: 20px 75px;
+    }
+    .modal-content.modal__content--manage-tags {
+        width: 55%;
+    }
+}
+
+/*
+***************************************************************
+Screen Size max-1235px and min-1200px
+***************************************************************
+*/
+@media (max-width: 1235px) {
+
+}
+/*
+***************************************************************
+Screen Size max-1024px
+***************************************************************
+*/
+@media (max-width: 1024px) {
+    .header__searchbar.searchbar {
+        max-width: 470px;
+    }
+    section.navigation-section {
+        width: 24%;
+    }
+    section.page-content-wrapper {
+        width: 76%;
+    }
+    .page-content-section {
+        padding: 0 30px;
+    }
+    .searchbar__card {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .guide__card {
+        right: 25px;
+    }
+    .productpage-main-content-section {
+        display: block;
+    }
+    .leftCol {
+        width: 100%;
+    }
+    .rightCol {
+        width: 100%;
+        margin: 20px 0;
+    }
+    .page-content-section.innerpages.productpage {
+        padding: 30px;
+    }
+    .modal-content.modal__content--manage-tags {
+        width: 55%;
+    }
+    .Col__card--body label span {
+        right: 70px;
+    }
+    .modal__body.settingPopup-body {
+        padding: 20px 40px;
+        height: 480px;
+    }
+    .settingPopup-left-column {
+        width: 25%;
+    }
+}
+/*
+***************************************************************
+Screen Size max-991px and min-860px
+***************************************************************
+*/
+@media (max-width: 991px) {
+    .modal-content.modal__content--manage-tags {
+        width: 65%;
+    }
+    .Col__card--body ul li svg {
+        right: 60px;
+    }
+    .modal__body.settingPopup-body {
+        height: 1240px;
+    }
+    .info__form-group .form__group select {
+        width: 96% !important;
+    }
+    .store-info__row .info__form-group input {
+        width: 93% !important;
+    }
+    .store-info__row.marBotton .info__form-group .form__group input {
+        width: 90% !important;
+    }
+}
+
+/*
+***************************************************************
+Screen Size max-860
+***************************************************************
+*/
+@media (max-width: 860px) {
+    .header__searchbar.searchbar {
+        max-width: 300px;
+    }
+    .modal {
+        padding-top: 25%;
+    }
+    .modal-content {
+        width: 95%;
+    }
+    .page-content-section__select-plan-btns {
+        margin-top: 10px;
+    }
+    .guidePopUp__taskbar p {
+        width: 45%;
+    }
+    .header__searchbar.searchbar {
+        max-width: 240px;
+    }
+    .guide__wrapper {
+        display: none;
+    }
+    section.navigation-section {
+        width: 30%;
+    }
+    section.page-content-wrapper {
+        width: 70%;
+    }
+    .modal-content.modal__content--manage-tags {
+        width: 70%;
+    }
+    .form__group.smallgroup input {
+        padding-left: 35px;
+        width: 75%;
+    }
+    .modal__body.settingPopup-body {
+        height: 1050px;
+    }
+}
+/*
+***************************************************************
+Screen Size max-768
+***************************************************************
+*/
+@media (max-width: 768px) {
+    .page-content-section__purchase-plan-section {
+        position: relative;
+        display: block;
+    }
+    .page-content-section__select-plan-btns .close-btn {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+    button.header__button.profile__btn p {
+        display: none;
+    }
+    section.navigation-section {
+        display: none;
+        position: fixed;
+        width: 60%;
+        top: 0;
+        background: var(--color-bg-app);
+        z-index: 99999;
+        transform: translateX(0);
+        transition: transform 300ms cubic-bezier(0,0,0.58,1);
+    }
+    section.page-content-wrapper {
+        width: 100%;
+    }
+    .guidePopUp__detail-card {
+        display: block;
+    }
+    .guidePopUp__taskbar p {
+        width: 50%;
+    }
+    .notification__card, .profile-card {
+        right: 40px;
+    }
+    .header__left .header__logo {
+        display: none;
+    }
+    .header__searchbar.searchbar {
+        max-width: 350px;
+    }
+    .mobile-logo {
+        background-color: var(--white);
+        border-bottom: var(--border-width-1) solid #dde0e4;
+        padding: 7px;
+    }
+    .nav__footer {
+        bottom: 0;
+    }
+    .mobile-overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: -100%;
+        bottom: 0;
+        background-color: #00000080;
+        z-index: 2;
+    }
+    .mobile-logo .close-btn {
+        background: transparent;
+        border: none;
+        color: white;
+        position: absolute;
+        right: -30px;
+        top: 20px;
+        z-index: 99;
+    }
+    .modal {
+        padding-top: 0;
+    }
+    .modal-content {
+        width: 100%;
+        border-radius: 0;
+    }
+    .modal__body {
+        height: 100%;
+    }
+    .modal__header {
+        position: fixed;
+        width: 94%;
+        z-index: 9999;
+    }
+    .modal__body {
+        margin-top: 70px;
+    }
+    ul.apps__container.recommended__apps__container {
+        display: block;
+    }
+    ul.apps__container.recommended__apps__container span.recommended__app__detail {
+        white-space: unset;
+    }
+    ul.apps__container.recommended__apps__container li.apps-section__card {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    li.apps-section__card {
+        width: 500px;
+        overflow: unset;
+        height: unset;
+        margin-right: 20px;
+    }
+    .apps__section {
+        overflow: auto;
+    }
+    .navbar--mobile {
+        display: block;
+    }
+    .mobile-logo {
+        display: block;
+    }
+    .modal__body.settingPopup-body {
+        height: 890px;
+    }
+}
+/*
+***************************************************************
+Screen Size max-540
+***************************************************************
+*/
+@media (max-width: 540px) {
+    .header__searchbar.searchbar {
+        max-width: 260px;
+    }
+    header.productPage__header .header__right__buttons {
+        margin-right: 20px;
+    }
+    .pageTitle {
+        padding: 0 20px;
+    }
+    .modal__body.settingPopup-body {
+        height: 625px;
+        padding: 30px 10px;
+    }
+    .settingPopup-left-column {
+        display: none;
+    }
+    .setting-popup__right-column {
+        width: 95%;
+        margin-left: 0;
+    }
+    .modal-content.modal__content--manage-tags {
+        width: 100%;
+    }
+}
+/*
+***************************************************************
+Screen Size max-450
+***************************************************************
+*/
+@media (max-width: 450px) {
+    .page-content-section {
+        padding: 0;
+    }
+    .page-content-section__purchase-plan-section {
+        border-radius: 0;
+    }
+    .page-content-section__purchase-plan-section p {
+        width: 90%;
+    }
+    .page-main-content-section {
+        border-radius: 0;
+    }
+    header {
+        padding: 0 10px;
+    }
+    .header__searchbar.searchbar {
+        max-width: 250px;
+    }
+    button.header__button {
+        padding: 4px 6px;
+    }
+    .notification__card, .profile-card {
+        right: 15px;
+    }
+    button.header__button.notification__btn:focus, button.header__button.profile__btn:focus {
+        background:none;
+        border-radius: 0;
+    }
+    .guidePopUp__taskbar p {
+        width: 75%;
+    }
+    .home__page__bottom__section {
+        margin: 50px 0 50px;
+        padding: 0 20px;
+    }
+    section.navigation-section {
+        width: 80%;
+    }
+    .page-content-section.innerpages {
+        padding: 30px 0;
+    }
+    .pageTitle {
+        padding: 0 20px;
+    }
+    .page-body {
+        margin-top: 45px;
+    }
+    .app__detail-section {
+        width: 100%;
+    }
+    .page-content-section.innerpages.productpage {
+        padding: 30px 0;
+    }
+    .leftCol__card, .rightCol__card {
+        border-radius: 0;
+    }
+    .form__group.smallgroup input {
+        padding-left: 35px;
+        width: 70%;
+    }
+    input.disabled--input {
+        width: 90% !important;
+    }
+    .Col__card--body ul li svg {
+        right: 25px;
+    }
+    .Col__card--body label span {
+        right: 25px;
+    }
+    .modal__body.settingPopup-body {
+        height: 825px;
+        padding: 0;
+    }
+    .setting-popup__right-column {
+        width: 100%;
+    }
+    .setting-popup__page-heading {
+        padding: 0 20px;
+    }
+    .setting-popup__content-card {
+        border-radius: 0;
+    }
+    .store-info__row .info__form-group input {
+        width: 92% !important;
+    }
+}
+/*
+***************************************************************
+Screen Size max-414
+***************************************************************
+*/
+@media (max-width: 414px) {
+    .modal__body.settingPopup-body {
+        height: 810px;
+    }
+
+}
+/*
+***************************************************************
+Screen Size max-395
+***************************************************************
+*/
+@media (max-width: 395px) {
+    .modal__body.settingPopup-body {
+        height: 770px;
+    }
+}
+/*
+***************************************************************
+Screen Size max-360
+***************************************************************
+*/
+@media (max-width: 360px) {
+    .modal__body.settingPopup-body {
+        height: 660px;
+    }
+}
+/*
+***************************************************************
+Screen Size max-375
+***************************************************************
+*/
+@media (max-width: 375px) {
+    .header__searchbar.searchbar {
+        max-width: 235px;
+    }
+    .modal__body.settingPopup-body {
+        height: 590px;
+    }
+}

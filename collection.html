@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shopify</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+<header>
+    <div class="header__left">
+        <div class="header__logo">
+            <a href="index.html">
+                <img src="images/logo.JPG" class="img-fluid">
+            </a>
+        </div>
+        <div class="header__navbar navbar--mobile" onclick="mobileNavBar()">
+            <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M3 4.75a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5h-12.5a.75.75 0 0 1-.75-.75Z"></path><path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5h-12.5a.75.75 0 0 1-.75-.75Z"></path><path fill-rule="evenodd" d="M3 15.25a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5h-12.5a.75.75 0 0 1-.75-.75Z"></path></svg>
+        </div>
+    </div>
+    <div class="header__center">
+        <button class="header__searchbar searchbar" onclick="searchbar()">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <span>Search</span>
+            <p>Ctrl K</p>
+        </button>
+
+        <div class="searchbar__card" id="searchbarCard">
+            <div class="searchbar__input">
+                <input type="text" class="header__searchbar searchbar" placeholder="Search">
+                <i class="fa fa-search" aria-hidden="true" ></i>
+            </div>
+
+            <div class="searchbar__buttons">
+                <button class="searchbar__button button--sales">
+                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M15.284 14.546a2.975 2.975 0 0 1 1.716-.546c1.654 0 3 1.346 3 3s-1.346 3-3 3-3-1.346-3-3a2.94 2.94 0 0 1 .129-.822l-1.575-1.125a3.964 3.964 0 0 1-2.554.947 3.964 3.964 0 0 1-2.554-.947l-1.575 1.125c.076.262.129.535.129.822 0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3c.615 0 1.214.191 1.716.546l1.56-1.114a3.97 3.97 0 0 1-.276-1.432c0-1.858 1.28-3.411 3-3.858v-2.327a2.993 2.993 0 0 1-2-2.815c0-1.654 1.346-3 3-3s3 1.346 3 3a2.996 2.996 0 0 1-2 2.816v2.326c1.72.447 3 2 3 3.858-.003.49-.096.976-.276 1.432l1.56 1.114zm1.037 3.146a1 1 0 0 0 .679.308 1 1 0 0 0 0-2 1 1 0 0 0-.679 1.692zm-14 0a1 1 0 0 0 .679.308 1 1 0 0 0 0-2 1 1 0 0 0-.679 1.692zm8.679-14.692c0-.551-.449-1-1-1-.551 0-1 .449-1 1 0 .551.449 1 1 1 .551 0 1-.449 1-1z"></path></svg>
+                    Sales channels
+                </button>
+                <button class="searchbar__button button--apps">
+                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M9 9h-8v-6.5a1.5 1.5 0 0 1 1.5-1.5h6.5v8zm0 2v8h-6.5a1.5 1.5 0 0 1-1.5-1.5v-6.5h8zm2 0v8h6.5a1.5 1.5 0 0 0 1.5-1.5v-6.5h-8zm4-10a1 1 0 0 1 1 1v2h2a1 1 0 1 1 0 2h-2v2a1 1 0 1 1-2 0v-2h-2a1 1 0 1 1 0-2h2v-2a1 1 0 0 1 1-1z"></path></svg>
+                    Apps
+                </button>
+            </div>
+            <p>Search your store and Shopify's resources, like apps, blogs, and help.</p>
+        </div>
+    </div>
+    <div class="header__right">
+        <div class="header__buttons">
+            <div class="guide__wrapper">
+                <button class="header__button guide__btn" onclick="guideBtn()">
+                    <i class="fa fa-flag" aria-hidden="true"></i>
+                    <p>Setup guide</p>
+                </button>
+                <div id="guidePopupCard" class="guide__card">
+                    <div class="guide__header">
+                        <div class="guide__header-top">
+                            <div class="guide__title">
+                                <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M3.249 2.001h13.868a.5.5 0 0 1 .428.758l-2.545 4.241 3.35 4.188a.5.5 0 0 1-.39.812l-12.49.001 1.507 6.782a1 1 0 1 1-1.953.434l-4-18a1 1 0 0 1 1.953-.434l.272 1.218z"></path></svg>
+                                <h2>Setup guide</h2>
+                            </div>
+                            <div class="guide__close-btn" onclick="guideBtn()">
+                                <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="m11.414 10 6.293-6.293a1 1 0 1 0-1.414-1.414l-6.293 6.293-6.293-6.293a1 1 0 0 0-1.414 1.414l6.293 6.293-6.293 6.293a1 1 0 1 0 1.414 1.414l6.293-6.293 6.293 6.293a.998.998 0 0 0 1.707-.707.999.999 0 0 0-.293-.707l-6.293-6.293z"></path></svg>
+                            </div>
+                        </div>
+                        <div class="guide__header-bottom">
+                            <div class="guidePopUp__taskbar">
+                                <p><span>0 </span> of <span> 8</span> tasks complete</p>
+                                <div class="guidePopUp__task-progress">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide__body">
+                        <div class="guidePopUp__accordion">
+                            <div class="guidePopUp__accordion-item">
+                                <div class="checklist__check-btn">
+                                    <input type="checkbox" id="checkbox5" />
+                                    <label for="checkbox5"></label>
+                                </div>
+                                <p class="guidePopUp__accordion-title">Add your first product</p>
+                                <div class="guidePopUp__panel">
+                                    <div class="guidePopUp__detail-card">
+                                        <div class="detail-card__text-side">
+                                            <div class="text-side__description">
+                                                <p>
+                                                    Write a description, add photos, and set pricing for the products you plan to sell.
+                                                    <a href="https://help.shopify.com/manual/products/add-update-products">Learn more about products</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="detail-card__image-side">
+                                            <img src="images/add-product-task.svg">
+                                            <div class="detail-card__image-overlay"></div>
+                                        </div>
+                                        <button class="primary__btn">Add Product</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guidePopUp__accordion-item">
+                                <div class="checklist__check-btn">
+                                    <input type="checkbox" id="checkbox6" />
+                                    <label for="checkbox6"></label>
+                                </div>
+                                <p class="guidePopUp__accordion-title">Customize your online store</p>
+                                <div class="guidePopUp__panel">
+                                    <div class="guidePopUp__detail-card">
+                                        <div class="detail-card__text-side">
+                                            <div class="text-side__description">
+                                                <p>
+                                                    Write a description, add photos, and set pricing for the products you plan to sell.
+                                                    <a href="https://help.shopify.com/manual/products/add-update-products">Learn more about products</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="detail-card__image-side">
+                                            <img src="images/add-product-task.svg">
+                                            <div class="detail-card__image-overlay"></div>
+                                        </div>
+                                        <button class="primary__btn">Add Product</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guidePopUp__accordion-item">
+                                <div class="checklist__check-btn">
+                                    <input type="checkbox" id="checkbox7" />
+                                    <label for="checkbox7"></label>
+                                </div>
+                                <p class="guidePopUp__accordion-title">Add pages to your store</p>
+                                <div class="guidePopUp__panel">
+                                    <div class="guidePopUp__detail-card">
+                                        <div class="detail-card__text-side">
+                                            <div class="text-side__description">
+                                                <p>
+                                                    Write a description, add photos, and set pricing for the products you plan to sell.
+                                                    <a href="https://help.shopify.com/manual/products/add-update-products">Learn more about products</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="detail-card__image-side">
+                                            <img src="images/add-product-task.svg">
+                                            <div class="detail-card__image-overlay"></div>
+                                        </div>
+                                        <button class="primary__btn">Add Product</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guidePopUp__accordion-item">
+                                <div class="checklist__check-btn">
+                                    <input type="checkbox" id="checkbox8" />
+                                    <label for="checkbox8"></label>
+                                </div>
+                                <p class="guidePopUp__accordion-title">Organize your store's navigation</p>
+                                <div class="guidePopUp__panel">
+                                    <div class="guidePopUp__detail-card">
+                                        <div class="detail-card__text-side">
+                                            <div class="text-side__description">
+                                                <p>
+                                                    Write a description, add photos, and set pricing for the products you plan to sell.
+                                                    <a href="https://help.shopify.com/manual/products/add-update-products">Learn more about products</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="detail-card__image-side">
+                                            <img src="images/add-product-task.svg">
+                                            <div class="detail-card__image-overlay"></div>
+                                        </div>
+                                        <button class="primary__btn">Add Product</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guidePopUp__accordion-item">
+                                <div class="checklist__check-btn">
+                                    <input type="checkbox" id="checkbox9" />
+                                    <label for="checkbox9"></label>
+                                </div>
+                                <p class="guidePopUp__accordion-title">Add a custom domain</p>
+                                <div class="guidePopUp__panel">
+                                    <div class="guidePopUp__detail-card">
+                                        <div class="detail-card__text-side">
+                                            <div class="text-side__description">
+                                                <p>
+                                                    Write a description, add photos, and set pricing for the products you plan to sell.
+                                                    <a href="https://help.shopify.com/manual/products/add-update-products">Learn more about products</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="detail-card__image-side">
+                                            <img src="images/add-product-task.svg">
+                                            <div class="detail-card__image-overlay"></div>
+                                        </div>
+                                        <button class="primary__btn">Add Product</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="guidePopUp__accordion-item">
+                                <div class="checklist__check-btn">
+                                    <input type="checkbox" id="checkbox10" />
+                                    <label for="checkbox10"></label>
+                                </div>
+                                <p class="guidePopUp__accordion-title">Add your first product</p>
+                                <div class="guidePopUp__panel">
+                                    <div class="guidePopUp__detail-card">
+                                        <div class="detail-card__text-side">
+                                            <div class="text-side__description">
+                                                <p>
+                                                    Write a description, add photos, and set pricing for the products you plan to sell.
+                                                    <a href="https://help.shopify.com/manual/products/add-update-products">Learn more about products</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="detail-card__image-side">
+                                            <img src="images/add-product-task.svg">
+                                            <div class="detail-card__image-overlay"></div>
+                                        </div>
+                                        <button class="primary__btn">Add Product</button>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="notification__wrapper">
+                <button class="notification__header-btn notification__btn" onclick="notification()" >
+                    <i class="fa fa-bell" aria-hidden="true"></i>
+                </button>
+                <div id="notificationCard" class="notification__card">
+                    <div class="notification__card-header">
+                        <h6>Alerts</h6>
+                        <div class="notification__organizer">
+                            <button class="notification__list-btn">
+                                <img src="images/list_icon.JPG">
+                                <span class="notification__list-btn-text">View unread only</span>
+                            </button>
+                            <button class="notification__mark-btn">
+                                <img src="images/mark_icon.JPG">
+                                <span class="notification__mark-btn-text">Mark all as read</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="notification__card-body">
+                        <p>Alerts about your store and account will show here</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="profile-wrapper" class="profile__wrapper">
+                <button class="header__button profile__btn" onclick="profile()">
+                    <div class="profile__image">
+                        <span>AB</span>
+                    </div>
+                    <p>Ayesha Bashir</p>
+                </button>
+                <div id="profileCard" class="profile-card">
+                    <ul class="profile__links">
+                        <li>
+                            <a href="#">
+                                <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg__375hu" focusable="false" aria-hidden="true"><path d="M10 15c-1.631 0-3.064-.792-3.978-2 .914-1.208 2.347-2 3.978-2 1.631 0 3.064.792 3.978 2-.914 1.208-2.347 2-3.978 2zm0-10c1.104 0 2 .897 2 2s-.896 2-2 2-2-.897-2-2 .896-2 2-2zm0-3c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8z"></path></svg>
+                                <span>Manage Accounts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg__375hu" focusable="false" aria-hidden="true"><path d="m2.554 3.128-.542 3.224a.893.893 0 0 0 .513.964c.12.055.25.084.382.084h.81a1.369 1.369 0 0 0 1.217-.747l.53-1.053.531 1.053a1.354 1.354 0 0 0 1.218.747h1.04a1.369 1.369 0 0 0 1.216-.747l.531-1.053.53 1.053a1.355 1.355 0 0 0 1.218.747h1.04a1.369 1.369 0 0 0 1.217-.747l.53-1.053.531 1.053a1.354 1.354 0 0 0 1.217.747h.81a.913.913 0 0 0 .692-.318.898.898 0 0 0 .203-.73l-.542-3.224a1.347 1.347 0 0 0-.463-.808 1.367 1.367 0 0 0-.88-.32h-12.207c-.322 0-.633.113-.88.32-.245.206-.41.492-.462.808Z"></path><path d="M17 16.65v-7.65h-14v7.65c0 .358.141.701.393.955.252.253.594.395.95.395h2.673v-6h5.968v6h2.673c.356 0 .698-.142.95-.395.252-.254.393-.597.393-.955Z"></path></svg>
+                                <span>Stores</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg__375hu" focusable="false" aria-hidden="true"><path d="M10 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-.707-10.293a1 1 0 0 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3a1 1 0 0 1-1.414-1.414l1.293-1.293h-3.586a1 1 0 1 1 0-2h3.586l-1.293-1.293z"></path></svg>
+                                <span>Log Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="web__support__links">
+                        <li>
+                            <a href="#">
+                                <span>Shopify Help Center</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Changelog</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Community forums</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Hire a Shopify expert</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Keyboard shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+<div class="page-body">
+    <section class="navigation-section" id="mobileNavBarCard">
+        <div class="mobile-logo">
+            <a href="index.html">
+                <img src="images/logo.JPG">
+            </a>
+            <button class="close-btn" onclick="mobileNavBar()"><i class="fa fa-close"></i></button>
+
+        </div>
+        <div class="page-navigation-bar">
+            <ul class="nav-bar">
+                <li>
+                    <a href="index.html">
+                        <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg__375hu" focusable="false" aria-hidden="true"><path d="M10.555 3.168a1 1 0 0 0-1.11 0l-5.554 3.702a2 2 0 0 0-.891 1.665v6.465a2 2 0 0 0 2 2h2a1 1 0 0 0 1-1v-4h4v4a1 1 0 0 0 1 1h2a2 2 0 0 0 2-2v-6.465a2 2 0 0 0-.89-1.664l-5.555-3.703Z"></path></svg>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg__375hu" focusable="false" aria-hidden="true"><path d="M3.735 5.507a3 3 0 0 1 2.96-2.507h6.61a3 3 0 0 1 2.96 2.507l.735 4.493v5a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2v-5l.735-4.493Zm2.96-.507a1 1 0 0 0-.987.836l-.708 4.164v1h1.394a3 3 0 0 1 1.665.504l.832.555a2 2 0 0 0 2.218 0l.832-.555a3 3 0 0 1 1.666-.504h1.393v-1l-.708-4.164a1 1 0 0 0-.986-.836h-6.612Z"></path></svg>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="add_product.html">
+                        <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg__375hu" focusable="false" aria-hidden="true"><path d="M10.408 3h5.592a1 1 0 0 1 1 1v5.592a2 2 0 0 1-.57 1.399l-5.162 5.277a2.5 2.5 0 0 1-3.536 0l-4-4a2.5 2.5 0 0 1 0-3.536l.008-.008 5.27-5.154a2 2 0 0 1 1.397-.57Zm3.092 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path></svg>
+                        <span>Products</span>
+                    </a>
+                </li>
+                <ul class="submenu">
+                    <li class="nav-bar__item--active">
+                        <a href="collection.html">
+                            <span>Collections</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Inventory</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Purchase orders</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Transfers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Gift cards</span>
+                        </a>
+                    </li>
+                </ul>
+                <li>
+                    <a href="#">
+                        <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg__375hu" focusable="false" aria-hidden="true"><path d="M10 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-3.5 8a2.5 2.5 0 0 1-1.768-4.268c.59-.577 2.468-1.732 5.268-1.732s4.678 1.155 5.268 1.732a2.5 2.5 0 0 1-1.768 4.268h-7Z"></path></svg>
+                        <span>Customers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg__375hu" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M3 5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2v-6Zm3 2a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm-3 9a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2h-6a1 1 0 0 1-1-1Zm13-1a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2h2Zm-4.388-8.435a1 1 0 0 1 1.8-.012l1.479 3.005a1 1 0 0 1-.898 1.442h-5.993c-.862 0-1.313-1.019-.74-1.664l.69-.996a.993.993 0 0 1 1.5 0l.418.51a.5.5 0 0 0 .828-.142l.916-2.143Z"></path></svg>
+                        <span>Content</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg__375hu" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M9.445 3.168a1 1 0 0 1 1.11 0l6 4a1 1 0 0 1 .152 1.54l-.707.706v4.586a1.55 1.55 0 0 1-.55 3h-10.9a1.55 1.55 0 0 1-.55-3v-4.586l-.707-.707a1 1 0 0 1 .152-1.54l6-3.999Zm2.555 5.832a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0v-3a1 1 0 0 1 1-1Zm-3 1a1 1 0 0 0-2 0v3a1 1 0 1 0 2 0v-3Z"></path></svg>
+                        <span>Finances</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg__375hu" focusable="false" aria-hidden="true"><path d="M7 11a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0v-5Zm4-5a1 1 0 1 1 2 0v10a1 1 0 1 1-2 0v-10Zm4-2a1 1 0 1 1 2 0v12a1 1 0 1 1-2 0v-12Zm-12 4a1 1 0 0 1 2 0v8a1 1 0 1 1-2 0v-8Z"></path></svg>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg__375hu" focusable="false" aria-hidden="true"><path d="M9 4a5 5 0 0 0-.163 9.997l.662 1.986a7 7 0 1 1 6.484-6.484l-1.986-.662a5 5 0 0 0-4.997-4.837Z"></path><path d="M9 8a1 1 0 0 0 0 2v2a3 3 0 1 1 3-3h-2a1 1 0 0 0-1-1Z"></path><path d="M11.316 10.051a1 1 0 0 0-1.265 1.265l2 6a1 1 0 0 0 1.898 0l.842-2.525 2.525-.842a1 1 0 0 0 0-1.898l-6-2Z"></path></svg>
+                        <span>Marketing</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg__375hu" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M6 3.072a2 2 0 0 0-.99 1.939 2 2 0 0 0-1.826 3.163 2 2 0 0 0 0 3.652 2 2 0 0 0 1.826 3.164 2 2 0 0 0 3.164 1.828 2 2 0 0 0 3.652 0 2 2 0 0 0 3.164-1.827 2 2 0 0 0 1.826-3.164 2 2 0 0 0 0-3.652 2 2 0 0 0-1.826-3.165 2 2 0 0 0-3.163-1.826 2 2 0 0 0-3.654 0 2 2 0 0 0-2.173-.112Zm6.832 4.483a1 1 0 1 0-1.664-1.11l-4 6a1 1 0 0 0 1.664 1.11l4-6Zm-5.832 1.445a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm7 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
+                        <span>Discounts</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="store-info">
+                <button class="store-info__sales-button">
+                    <span>Sales channels</span>
+                    <span><i class="fa fa-angle-right"></i></span>
+                </button>
+                <ul class="nav-bar store__nav__links">
+                    <li class="store-info__link">
+                        <a href="#">
+                            <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg__375hu" focusable="false" aria-hidden="true"><path d="m2.554 3.128-.542 3.224a.893.893 0 0 0 .513.964c.12.055.25.084.382.084h.81a1.369 1.369 0 0 0 1.217-.747l.53-1.053.531 1.053a1.354 1.354 0 0 0 1.218.747h1.04a1.369 1.369 0 0 0 1.216-.747l.531-1.053.53 1.053a1.355 1.355 0 0 0 1.218.747h1.04a1.369 1.369 0 0 0 1.217-.747l.53-1.053.531 1.053a1.354 1.354 0 0 0 1.217.747h.81a.913.913 0 0 0 .692-.318.898.898 0 0 0 .203-.73l-.542-3.224a1.347 1.347 0 0 0-.463-.808 1.367 1.367 0 0 0-.88-.32h-12.207c-.322 0-.633.113-.88.32-.245.206-.41.492-.462.808Z"></path><path d="M17 16.65v-7.65h-14v7.65c0 .358.141.701.393.955.252.253.594.395.95.395h2.673v-6h5.968v6h2.673c.356 0 .698-.142.95-.395.252-.254.393-.597.393-.955Z"></path></svg>
+                            <span>Online Store</span>
+                            <span class="view__store">
+                                <i class="fa fa-eye"></i>
+                            <span class="view__store__text">View your online store</span>
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 20"><path d="M8.717 9.46l.77-2.26s-.52-.29-1.57-.29c-2.71 0-4.06 1.8-4.06 3.66 0 2.21 2.22 2.27 2.22 3.61 0 .33-.23.77-.8.77-.87 0-1.9-.88-1.9-.88l-.53 1.73s1.01 1.21 2.97 1.21c1.64 0 2.85-1.22 2.85-3.12 0-2.42-2.7-2.81-2.7-3.85 0-.18.06-.93 1.26-.93.82 0 1.49.35 1.49.35zm-2.34-5.62c-.51.14-.88.57-.94 1.09-.04.42.2.85.7.81s.9-.51 1-.97c.11-.49-.18-1.04-.76-.93zm1.35-2.7c-.32 0-.72.55-.84 1.36l1.6-.39c-.19-.64-.53-.97-.76-.97zm1.93.9c.32.09.62.29.81.58l1.62 2.13c.16.23.196.458.18.78l-.23 4.84-.33 6.68-.1 1.96c0 .13-.01.26-.03.38-.09.49-.51.67-.97.59l-8.65-1.62c-.51-.09-1.07-.15-1.57-.29-.6-.17-.34-1.1-.28-1.55l.36-2.78.82-6.23c.03-.21.05-.42.08-.63.05-.28.17-.55.34-.78l1.68-2.39c.18-.28.47-.48.8-.55l1.21-.3.3-.07c.09-1.58.94-2.79 2.04-2.79.9 0 1.65.86 1.92 2.04zM12 2l3.875 2.616c.168.157.276.37.31.598l1.77 13.008c.05.195 0 .4-.135.55-.13.15-.33.226-.527.2l-3.61-.37.066-1.36.33-6.864.25-5.208c.01-.182-.05-.36-.164-.503L12 2z"/></svg>
+                            <span>Point of Sale</span>
+                        </a>
+                    </li>
+                </ul>
+            </ul>
+            <ul class="store-info store-info__app-addons">
+                <button class="store-info__sales-button">
+                    <span>Apps</span>
+                    <span><i class="fa fa-angle-right"></i></span>
+                </button>
+                <ul class="nav-bar store__nav__links">
+                    <li class="store-info__link">
+                        <a href="#" id="addApps">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" class="Polaris-Icon__Svg__375hu" focusable="false" aria-hidden="true"><rect x="2" y="2" width="16" height="16" rx="1.6" fill="#EDEEEF"></rect><path d="M11 10.5h-.5V14a.5.5 0 0 1-1 0v-3.5H6a.5.5 0 0 1 0-1h3.5V6a.5.5 0 0 1 1 0v3.5H14a.5.5 0 0 1 0 1h-3Z" stroke="#8C9196"></path></svg>
+                            <span>Add apps</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </ul>
+        </div>
+        <div class="nav__footer">
+            <ul>
+                <li id="settingPopupBtn">
+                    <button >
+                        <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg__375hu" focusable="false" aria-hidden="true"><path d="M10 13a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm7.476-1.246c-1.394-.754-1.394-2.754 0-3.508a1 1 0 0 0 .376-1.404l-1.067-1.733a1 1 0 0 0-1.327-.355l-.447.243c-1.329.719-2.945-.244-2.945-1.755v-.242a1 1 0 0 0-1-1h-2.132a1 1 0 0 0-1 1v.242c0 1.511-1.616 2.474-2.945 1.755l-.447-.243a1 1 0 0 0-1.327.355l-1.067 1.733a1 1 0 0 0 .376 1.404c1.394.754 1.394 2.754 0 3.508a1 1 0 0 0-.376 1.404l1.067 1.733a1 1 0 0 0 1.327.355l.447-.243c1.329-.719 2.945.244 2.945 1.755v.242a1 1 0 0 0 1 1h2.132a1 1 0 0 0 1-1v-.242c0-1.511 1.616-2.474 2.945-1.755l.447.243a1 1 0 0 0 1.327-.355l1.067-1.733a1 1 0 0 0-.376-1.404z"></path></svg>
+                        <span>Settings</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile-overlay"></div>
+
+    </section>
+    <section class="page-content-wrapper">
+        <div class="page-content-section innerpages">
+            <div class="pageTitle">
+                <h1>Collections</h1>
+            </div>
+            <div class="page-main-content-section collectionPage">
+                <img src="images/collection-page-img.svg">
+                <h3>Group your products into categories</h3>
+                <span>Use collections to organize your products into categories and
+                    <br>galleries for your online store.</span>
+                <div class="addBtn">
+                    <button class="primary__btn">Create Collection</button>
+                </div>
+            </div>
+
+
+
+            <div class="collectionPage--bottom">
+                <p>Learn more about <a href="#">collections</a></p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+<!-- Add Apps Model -->
+<div id="addAppsModel" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal__content">
+        <div class="modal__header">
+            <span class="close">&times;</span>
+            <h2>Picked for you</h2>
+        </div>
+        <div class="modal__body">
+            <div class="apps__section">
+                <h3>Start with the apps other merchants add first</h3>
+                <ul class="apps__container">
+                    <li class="apps-section__card">
+                        <div class="app__info">
+                            <p>Don’t have anything to sell yet? Use an app to find new products.</p>
+                            <span class="app__category">Top sourcing app</span>
+                        </div>
+                        <div class="app__details-wrapper">
+                            <div class="app-details-wrapper__logo">
+                                <img src="images/app_logo_1.JPG">
+                            </div>
+                            <div class="app__detail-section">
+                                <a href="#">Printful: Print on Demand</a>
+                                <div class="recommended__app__intro">
+                                    <div class="app__rating-price-div">
+                                        <span class="app-details-wrapper__rating"><i class="fa fa-star"></i>4.6 (4.2k)</span>
+                                        <span class="app-details-wrapper__price">Free</span>
+                                    </div>
+                                    <div class="app__add-btn-div">
+                                        <button class="add-app__btn">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="apps-section__card">
+                        <div class="app__info">
+                            <p>Customize your store to stand out and sell more.</p>
+                            <span class="app__category">Top store design app</span>
+                        </div>
+                        <div class="app__details-wrapper">
+                            <div class="app-details-wrapper__logo">
+                                <img src="images/app_logo_2.JPG">
+                            </div>
+                            <div class="app__detail-section">
+                                <a href="#">PageFly Landing Page Builder</a>
+                                <div class="recommended__app__intro">
+                                    <div class="app__rating-price-div">
+                                        <span class="app-details-wrapper__rating">4.9 (7.7k)</span>
+                                        <span class="app-details-wrapper__price">Free plan available</span>
+                                    </div>
+                                    <div class="app__add-btn-div">
+                                        <button class="add-app__btn">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="apps-section__card">
+                        <div class="app__info">
+                            <p>Find new customers and keep them coming back for more.</p>
+                            <span class="app__category">Top marketing app</span>
+                        </div>
+                        <div class="app__details-wrapper">
+                            <div class="app-details-wrapper__logo">
+                                <img src="images/app_logo_3.JPG">
+                            </div>
+                            <div class="app__detail-section">
+                                <a href="#">Judge.me Product Reviews</a>
+                                <div class="recommended__app__intro">
+                                    <div class="app__rating-price-div">
+                                        <span class="app-details-wrapper__rating">5.0 (15.5k)</span>
+                                        <span class="app-details-wrapper__price">Free plan available</span>
+                                    </div>
+                                    <div class="app__add-btn-div">
+                                        <button class="add-app__btn">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="apps-section recommended-apps-section">
+                <h3>More apps your business might need</h3>
+                <ul class="apps-section__container recommended-apps-container">
+                    <li class="apps-section__card">
+                        <div class="app__details-wrapper">
+                            <div class="app-details-wrapper__logo">
+                                <img src="images/app_logo_1.JPG">
+                            </div>
+                            <div class="app__detail-section">
+                                <div class="recommended__app__intro">
+                                    <div class="recommended__app__intro">
+                                        <a href="#">Printful: Print on Demand</a>
+                                        <div class="app__rating-price-div">
+                                            <span class="app-details-wrapper__rating"><i class="fa fa-star"></i>4.6 (4.2k)</span>
+                                            <span class="app-details-wrapper__price"><i class="fa fa-circle"></i> Free</span>
+                                        </div>
+                                    </div>
+                                    <div class="app__add-btn-div">
+                                        <button class="add-app__btn">Add</button>
+                                    </div>
+                                </div>
+                                <span class="recommended__app__detail">Create custom, shoppable Instagram feeds to promote products</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="apps-section__card">
+                        <div class="app__details-wrapper">
+                            <div class="app-details-wrapper__logo">
+                                <img src="images/app_logo_1.JPG">
+                            </div>
+                            <div class="app__detail-section">
+                                <div class="recommended__app__intro">
+                                    <div class="recommended__app__intro">
+                                        <a href="#">Printful: Print on Demand</a>
+                                        <div class="app__rating-price-div">
+                                            <span class="app-details-wrapper__rating"><i class="fa fa-star"></i>4.6 (4.2k)</span>
+                                            <span class="app-details-wrapper__price"><i class="fa fa-circle"></i> Free</span>
+                                        </div>
+                                    </div>
+                                    <div class="app__add-btn-div">
+                                        <button class="add-app__btn">Add</button>
+                                    </div>
+                                </div>
+                                <span class="recommended__app__detail">Create custom, shoppable Instagram feeds to promote products</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="apps-section__container recommended-apps-container">
+                    <li class="apps-section__card">
+                        <div class="app__details-wrapper">
+                            <div class="app-details-wrapper__logo">
+                                <img src="images/app_logo_1.JPG">
+                            </div>
+                            <div class="app__detail-section">
+                                <div class="recommended__app__intro">
+                                    <div class="recommended__app__intro">
+                                        <a href="#">Printful: Print on Demand</a>
+                                        <div class="app__rating-price-div">
+                                            <span class="app-details-wrapper__rating"><i class="fa fa-star"></i>4.6 (4.2k)</span>
+                                            <span class="app-details-wrapper__price"><i class="fa fa-circle"></i> Free</span>
+                                        </div>
+                                    </div>
+                                    <div class="app__add-btn-div">
+                                        <button class="add-app__btn">Add</button>
+                                    </div>
+                                </div>
+                                <span class="recommended__app__detail">Create custom, shoppable Instagram feeds to promote products</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="apps-section__card">
+                        <div class="app__details-wrapper">
+                            <div class="app-details-wrapper__logo">
+                                <img src="images/app_logo_1.JPG">
+                            </div>
+                            <div class="app__detail-section">
+                                <div class="recommended__app__intro">
+                                    <div class="recommended__app__intro">
+                                        <a href="#">Printful: Print on Demand</a>
+                                        <div class="app__rating-price-div">
+                                            <span class="app-details-wrapper__rating"><i class="fa fa-star"></i>4.6 (4.2k)</span>
+                                            <span class="app-details-wrapper__price"><i class="fa fa-circle"></i> Free</span>
+                                        </div>
+                                    </div>
+                                    <div class="app__add-btn-div">
+                                        <button class="add-app__btn">Add</button>
+                                    </div>
+                                </div>
+                                <span class="recommended__app__detail">Create custom, shoppable Instagram feeds to promote products</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="apps-section recommended-apps-section">
+                <div class="app__section__heading">
+                    <h3>Made by Shopify</h3>
+                    <a href="#">View More</a>
+                </div>
+
+                <ul class="apps-section__container recommended-apps-container">
+                    <li class="apps-section__card">
+                        <div class="app__details-wrapper">
+                            <div class="app-details-wrapper__logo">
+                                <img src="images/app_logo_1.JPG">
+                            </div>
+                            <div class="app__detail-section">
+                                <div class="recommended__app__intro">
+                                    <div class="recommended__app__intro">
+                                        <a href="#">Printful: Print on Demand</a>
+                                        <div class="app__rating-price-div">
+                                            <span class="app-details-wrapper__rating"><i class="fa fa-star"></i>4.6 (4.2k)</span>
+                                            <span class="app-details-wrapper__price"><i class="fa fa-circle"></i> Free</span>
+                                        </div>
+                                    </div>
+                                    <div class="app__add-btn-div">
+                                        <button class="add-app__btn">Add</button>
+                                    </div>
+                                </div>
+                                <span class="recommended__app__detail">Create custom, shoppable Instagram feeds to promote products</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="apps-section__card">
+                        <div class="app__details-wrapper">
+                            <div class="app-details-wrapper__logo">
+                                <img src="images/app_logo_1.JPG">
+                            </div>
+                            <div class="app__detail-section">
+                                <div class="recommended__app__intro">
+                                    <div class="recommended__app__intro">
+                                        <a href="#">Printful: Print on Demand</a>
+                                        <div class="app__rating-price-div">
+                                            <span class="app-details-wrapper__rating"><i class="fa fa-star"></i>4.6 (4.2k)</span>
+                                            <span class="app-details-wrapper__price"><i class="fa fa-circle"></i> Free</span>
+                                        </div>
+                                    </div>
+                                    <div class="app__add-btn-div">
+                                        <button class="add-app__btn">Add</button>
+                                    </div>
+                                </div>
+                                <span class="recommended__app__detail">Create custom, shoppable Instagram feeds to promote products</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <p>Find more apps in the <a href="/admin/app__store/redirect?url=https://apps.shopify.com&st__campaign=app-modal-browse-all-apps&st__source=admin&utm__content=contextual&utm__medium=shopify&utm__source=admin&utm__campaign=app-modal-browse-all-apps">Shopify App Store</a></p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- End of Add Apps Model -->
+
+
+<!-- Settings PopUp Page -->
+<div id="settingPopupModal" class="settingPopup-modal">
+
+    <!-- Modal content -->
+    <div class="settingPopup-modal-content">
+        <div class="modal__header">
+            <span class="close-four">&times;</span>
+            <h2>
+                <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg__375hu" focusable="false" aria-hidden="true"><path d="M10 13a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm7.476-1.246c-1.394-.754-1.394-2.754 0-3.508a1 1 0 0 0 .376-1.404l-1.067-1.733a1 1 0 0 0-1.327-.355l-.447.243c-1.329.719-2.945-.244-2.945-1.755v-.242a1 1 0 0 0-1-1h-2.132a1 1 0 0 0-1 1v.242c0 1.511-1.616 2.474-2.945 1.755l-.447-.243a1 1 0 0 0-1.327.355l-1.067 1.733a1 1 0 0 0 .376 1.404c1.394.754 1.394 2.754 0 3.508a1 1 0 0 0-.376 1.404l1.067 1.733a1 1 0 0 0 1.327.355l.447-.243c1.329-.719 2.945.244 2.945 1.755v.242a1 1 0 0 0 1 1h2.132a1 1 0 0 0 1-1v-.242c0-1.511 1.616-2.474 2.945-1.755l.447.243a1 1 0 0 0 1.327-.355l1.067-1.733a1 1 0 0 0-.376-1.404z"></path></svg>
+                Setting
+            </h2>
+        </div>
+        <div class="modal__body settingPopup-body">
+            <div class="settingPopup-left-column">
+                <div class="settingPopup-navbar">
+                    <div class="settingPopup-navbar-header">
+                        <h4>My Store</h4>
+                        <a href="#">mystorelink</a>
+                    </div>
+                    <div class="settingPopup-navbar-body">
+                        <ul>
+                            <li class="tablinks" onclick="openCity(event, 'storeDetails')" id="defaultOpen">
+                                <a href="#">
+                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="m1.791 2.253-.597 3.583a1 1 0 0 0 .986 1.164h.893a1.5 1.5 0 0 0 1.342-.83l.585-1.17.585 1.17a1.5 1.5 0 0 0 1.342.83h1.146a1.5 1.5 0 0 0 1.342-.83l.585-1.17.585 1.17a1.5 1.5 0 0 0 1.342.83h1.146a1.5 1.5 0 0 0 1.342-.83l.585-1.17.585 1.17a1.5 1.5 0 0 0 1.342.83h.893a1 1 0 0 0 .986-1.164l-.597-3.583a1.5 1.5 0 0 0-1.48-1.253h-13.458a1.5 1.5 0 0 0-1.48 1.253z"></path><path d="M18 9h-16v8.5a1.5 1.5 0 0 0 1.5 1.5h3.5v-7h6v7h3.5a1.5 1.5 0 0 0 1.5-1.5v-8.5z"></path></svg>
+                                    <span>Store Details</span>
+                                </a>
+                            </li>
+                            <li class="tablinks" onclick="openCity(event, 'EditingPage')">
+                                <a href="#">
+                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M11 1a2 2 0 0 0-2 2v3h-2a2 2 0 0 0-2 2v3h-2a2 2 0 0 0-2 2v3c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-13a2 2 0 0 0-2-2h-6Zm0 2h5v3h-5v-3Zm-4 5h5v3h-5v-3Zm-4 5h5v3h-5v-3Z"></path></svg>
+                                    <span>Editing Details</span>
+                                </a>
+                            </li>
+                            <li class="tablinks" onclick="openCity(event, 'transferOwnership')">
+                                <a href="#">
+                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M10 0c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm6.24 15a7.99 7.99 0 0 1-12.48 0 7.99 7.99 0 0 1 12.48 0zm-6.24-5a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path></svg>
+                                    <span>Users and permissions</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M4.5 0h11a1.5 1.5 0 0 1 1.5 1.5v18.223a.2.2 0 0 1-.335.148l-1.662-1.513a.5.5 0 0 0-.673 0l-1.66 1.51a.5.5 0 0 1-.673 0l-1.66-1.51a.5.5 0 0 0-.674 0l-1.66 1.51a.5.5 0 0 1-.673 0l-1.66-1.51a.5.5 0 0 0-.673 0l-1.662 1.512a.2.2 0 0 1-.335-.147v-18.223a1.5 1.5 0 0 1 1.5-1.5zm4.207 11.293c.667.667 1.29.706 1.316.707.528 0 .977-.448.977-1 0-.646-.128-.751-1.243-1.03h-.001c-1.031-.258-2.756-.69-2.756-2.97a2.993 2.993 0 0 1 2-2.815v-.185a1 1 0 0 1 2 0v.2a4.51 4.51 0 0 1 1.707 1.093 1 1 0 0 1-1.414 1.414c-.667-.667-1.291-.706-1.317-.707-.528 0-.976.448-.976 1 0 .646.127.751 1.242 1.03h.002c1.03.258 2.756.69 2.756 2.97a2.995 2.995 0 0 1-2 2.815v.185a1 1 0 0 1-2 0v-.2a4.49 4.49 0 0 1-1.707-1.093 1 1 0 1 1 1.414-1.414z"></path></svg>
+                                    <span>Billing</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="m4.002 5-3.452 1.76a.985.985 0 0 0-.549.9v10.34c0 .51.38.93.879.99l8.023 1a.997.997 0 0 0 1.068-.67l1.766-5.32h3.273c1.297 0 2.405-.84 2.814-2h.679c.828 0 1.497-.67 1.497-1.5v-5.5h-15.998zm.998 5h10.01c.27 0 .509.1.709.31.19.18.289.42.289.69 0 .55-.449 1-.998 1h-3.992c-.429 0-.808.28-.948.68l-1.736 5.23-6.338-.79v-8.85l2.006-1v1.74a1 1 0 0 0 .998.99zm13.503-9h-13.004c-.828 0-1.497.67-1.497 1.5v.5h15.998v-.5c0-.83-.669-1.5-1.497-1.5z"></path></svg>
+                                    <span>Payments</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M1 1c0-.552.45-1 1.004-1h1.505c.831 0 1.505.672 1.505 1.5v.56l12.574.908c.877.055 1.52.843 1.397 1.71l-.866 6.034a1.504 1.504 0 0 1-1.489 1.288h-11.616v2h10.043a3.005 3.005 0 0 1 3.011 3c0 1.657-1.348 3-3.01 3a3.005 3.005 0 0 1-2.84-4h-5.368a3.005 3.005 0 0 1-2.84 4 3.005 3.005 0 0 1-3.01-3c0-1.306.838-2.418 2.007-2.83v-12.17h-1.003a1.002 1.002 0 0 1-1.004-1zm13.054 16c0-.552.449-1 1.003-1 .554 0 1.004.448 1.004 1s-.45 1-1.004 1a1.002 1.002 0 0 1-1.003-1zm-11.047 0c0-.552.45-1 1.004-1s1.003.448 1.003 1-.449 1-1.003 1a1.002 1.002 0 0 1-1.004-1z"></path></svg>
+                                    <span>Checkout</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M14.363 5.22a4.22 4.22 0 1 1-8.439 0 4.22 4.22 0 0 1 8.439 0zm-11.693 9.249c1.385-1.09 4.141-2.853 7.474-2.853 3.332 0 6.089 1.764 7.474 2.853.618.486.81 1.308.567 2.056l-.333 1.02a2.11 2.11 0 0 1-2.006 1.455h-11.405a2.11 2.11 0 0 1-2.005-1.455l-.333-1.02c-.245-.748-.052-1.57.567-2.056z"></path></svg>
+                                    <span>Customer Accounts</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 2a1.5 1.5 0 0 0-1.5 1.5v11a1.5 1.5 0 0 0 1.5 1.5h.5a3 3 0 1 0 6 0h4a3 3 0 1 0 6 0h.5a1.5 1.5 0 0 0 1.5-1.5v-3.361a1.5 1.5 0 0 0-.214-.772l-2.783-4.639a1.5 1.5 0 0 0-1.286-.728h-2.717v-1.5a1.5 1.5 0 0 0-1.5-1.5h-10zm13.5 15a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm-11-1a1 1 0 1 0 2 0 1 1 0 0 0-2 0zm13.234-6h-4.234v-3h2.434l1.8 3z"></path></svg>
+                                    <span>Shipping and delivery</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M4.5 0h11c.828 0 1.5.677 1.5 1.512v18.21a.2.2 0 0 1-.334.149l-1.664-1.515a.497.497 0 0 0-.67 0l-1.664 1.514a.497.497 0 0 1-.67 0l-1.663-1.514a.497.497 0 0 0-.67 0l-1.663 1.514a.497.497 0 0 1-.67 0l-1.664-1.514a.497.497 0 0 0-.67 0l-1.664 1.559a.2.2 0 0 1-.334-.15v-18.253c0-.835.672-1.512 1.5-1.512zm3 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm6.5 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-.293-4.793a1 1 0 0 0-1.414-1.414l-6 6a1 1 0 1 0 1.414 1.414l6-6z"></path></svg>
+                                    <span>Taxes and duties</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M18 8c0-4.42-3.58-8-8-8s-8 3.58-8 8c0 .15 0 .29.01.44.13 3.55 1.99 7.62 7.13 11.29.51.36 1.21.36 1.72 0 5.14-3.67 7-7.74 7.13-11.29.01-.15.01-.29.01-.44zm-5.879 2.121a2.996 2.996 0 0 0 0-4.242 2.996 2.996 0 0 0-4.242 0 2.996 2.996 0 0 0 0 4.242 2.996 2.996 0 0 0 4.242 0z"></path></svg>
+                                    <span>Location</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M5 4.5c0-.737.69-1.5 1.77-1.5 1.048 0 2.23.87 2.23 2.333v.667h-.846c-.805 0-1.656-.011-2.306-.25-.302-.112-.498-.253-.621-.413-.115-.15-.227-.397-.227-.837zm6.846 1.5h-.846v-.667c0-1.463 1.181-2.333 2.23-2.333 1.08 0 1.77.763 1.77 1.5 0 .44-.112.686-.227.837-.123.16-.319.3-.621.412-.65.24-1.5.251-2.306.251zm5.154-1.5c0 .558-.103 1.06-.306 1.5h1.806a1.5 1.5 0 0 1 1.5 1.5v2.5h-20v-2.5a1.5 1.5 0 0 1 1.5-1.5h1.806a3.547 3.547 0 0 1-.306-1.5c0-2.03 1.783-3.5 3.77-3.5 1.165 0 2.398.546 3.23 1.529.832-.983 2.065-1.529 3.23-1.529 1.988 0 3.77 1.47 3.77 3.5zm-8 15.5v-8h-8v6.5c0 .83.67 1.5 1.5 1.5h6.5zm2 0v-8h8v6.5c0 .83-.67 1.5-1.5 1.5h-6.5z"></path></svg>
+                                    <span>Gift Cards</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M9 9h-8v-6.5a1.5 1.5 0 0 1 1.5-1.5h6.5v8zm0 2v8h-6.5a1.5 1.5 0 0 1-1.5-1.5v-6.5h8zm2 0v8h6.5a1.5 1.5 0 0 0 1.5-1.5v-6.5h-8zm4-10a1 1 0 0 1 1 1v2h2a1 1 0 1 1 0 2h-2v2a1 1 0 1 1-2 0v-2h-2a1 1 0 1 1 0-2h2v-2a1 1 0 0 1 1-1z"></path></svg>
+                                    <span>Apps and sales channels</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M4.5 0h11c.828 0 1.5.677 1.5 1.512v18.21a.2.2 0 0 1-.334.149l-1.664-1.515a.497.497 0 0 0-.67 0l-1.664 1.514a.497.497 0 0 1-.67 0l-1.663-1.514a.497.497 0 0 0-.67 0l-1.663 1.514a.497.497 0 0 1-.67 0l-1.664-1.514a.497.497 0 0 0-.67 0l-1.664 1.559a.2.2 0 0 1-.334-.15v-18.253c0-.835.672-1.512 1.5-1.512zm3 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm6.5 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-.293-4.793a1 1 0 0 0-1.414-1.414l-6 6a1 1 0 1 0 1.414 1.414l6-6z"></path></svg>
+                                    <span>Taxes and duties</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M18 8c0-4.42-3.58-8-8-8s-8 3.58-8 8c0 .15 0 .29.01.44.13 3.55 1.99 7.62 7.13 11.29.51.36 1.21.36 1.72 0 5.14-3.67 7-7.74 7.13-11.29.01-.15.01-.29.01-.44zm-5.879 2.121a2.996 2.996 0 0 0 0-4.242 2.996 2.996 0 0 0-4.242 0 2.996 2.996 0 0 0 0 4.242 2.996 2.996 0 0 0 4.242 0z"></path></svg>
+                                    <span>Location</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M5 4.5c0-.737.69-1.5 1.77-1.5 1.048 0 2.23.87 2.23 2.333v.667h-.846c-.805 0-1.656-.011-2.306-.25-.302-.112-.498-.253-.621-.413-.115-.15-.227-.397-.227-.837zm6.846 1.5h-.846v-.667c0-1.463 1.181-2.333 2.23-2.333 1.08 0 1.77.763 1.77 1.5 0 .44-.112.686-.227.837-.123.16-.319.3-.621.412-.65.24-1.5.251-2.306.251zm5.154-1.5c0 .558-.103 1.06-.306 1.5h1.806a1.5 1.5 0 0 1 1.5 1.5v2.5h-20v-2.5a1.5 1.5 0 0 1 1.5-1.5h1.806a3.547 3.547 0 0 1-.306-1.5c0-2.03 1.783-3.5 3.77-3.5 1.165 0 2.398.546 3.23 1.529.832-.983 2.065-1.529 3.23-1.529 1.988 0 3.77 1.47 3.77 3.5zm-8 15.5v-8h-8v6.5c0 .83.67 1.5 1.5 1.5h6.5zm2 0v-8h8v6.5c0 .83-.67 1.5-1.5 1.5h-6.5z"></path></svg>
+                                    <span>Gift Cards</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M9 9h-8v-6.5a1.5 1.5 0 0 1 1.5-1.5h6.5v8zm0 2v8h-6.5a1.5 1.5 0 0 1-1.5-1.5v-6.5h8zm2 0v8h6.5a1.5 1.5 0 0 0 1.5-1.5v-6.5h-8zm4-10a1 1 0 0 1 1 1v2h2a1 1 0 1 1 0 2h-2v2a1 1 0 1 1-2 0v-2h-2a1 1 0 1 1 0-2h2v-2a1 1 0 0 1 1-1z"></path></svg>
+                                    <span>Apps and sales channels</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="setting-popup__right-column">
+                <div id="storeDetails" class="tabcontent">
+                    <div class="setting-popup__page-heading">
+                        <h2>Store Details</h2>
+                    </div>
+                    <div class="setting-popup__content-card">
+                        <div class="setting-popup__content-card__header">
+                            <h2>Profile</h2>
+                            <button onclick="editPersonalDetail(this)">Edit</button>
+                        </div>
+                        <div class="setting-popup__content-card__body">
+                            <div class="store-info__row">
+                                <div class="info__form-group">
+                                    <div class="store-info__sales-button">
+                                        <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="m1.791 2.253-.597 3.583a1 1 0 0 0 .986 1.164h.893a1.5 1.5 0 0 0 1.342-.83l.585-1.17.585 1.17a1.5 1.5 0 0 0 1.342.83h1.146a1.5 1.5 0 0 0 1.342-.83l.585-1.17.585 1.17a1.5 1.5 0 0 0 1.342.83h1.146a1.5 1.5 0 0 0 1.342-.83l.585-1.17.585 1.17a1.5 1.5 0 0 0 1.342.83h.893a1 1 0 0 0 .986-1.164l-.597-3.583a1.5 1.5 0 0 0-1.48-1.253h-13.458a1.5 1.5 0 0 0-1.48 1.253z"></path><path d="M18 9h-16v8.5a1.5 1.5 0 0 0 1.5 1.5h3.5v-7h6v7h3.5a1.5 1.5 0 0 0 1.5-1.5v-8.5z"></path></svg>
+                                    </div>
+                                    <div class="store__info">
+                                        <span>Store Name</span>
+                                        <h2>My Store</h2>
+                                    </div>
+                                </div>
+                                <div class="info__form-group">
+                                    <div class="store-info__sales-button">
+                                        <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="m7.876 6.976-.534-2.67a1.5 1.5 0 0 0-1.471-1.206h-3.233c-.86 0-1.576.727-1.537 1.586.461 10.161 5.499 14.025 14.415 14.413.859.037 1.584-.676 1.584-1.535v-3.235a1.5 1.5 0 0 0-1.206-1.471l-2.67-.534a1.5 1.5 0 0 0-1.636.8l-.488.975c-2 0-5-3-5-5l.975-.488c.606-.302.934-.972.801-1.635z"></path></svg>
+                                    </div>
+                                    <div class="store__info">
+                                        <span>Phone</span>
+                                        <h2>1234567890</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info__form-group">
+                                <div class="store-info__sales-button">
+                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path d="M0 5.324v10.176a1.5 1.5 0 0 0 1.5 1.5h17a1.5 1.5 0 0 0 1.5-1.5v-10.176l-9.496 5.54a1 1 0 0 1-1.008 0l-9.496-5.54z"></path><path d="M19.443 3.334a1.494 1.494 0 0 0-.943-.334h-17a1.49 1.49 0 0 0-.943.334l9.443 5.508 9.443-5.508z"></path></svg>
+                                </div>
+                                <div class="store__info">
+                                    <span>Email</span>
+                                    <h2>mystore@gamil.com</h2>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="editPersonalDetailCard" class="setting-popup__content-card__body editing-card">
+                            <div class="store-info__row">
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>Store Name</label>
+                                        <input type="text" value="My Store" class="custom-input">
+                                        <span>Appears on your website.</span>
+                                    </div>
+                                </div>
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>Phone</label>
+                                        <input type="text" value="1234567890">
+                                        <span>Appears on your website.</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info__form-group">
+                                <div class="form__group">
+                                    <label>Email</label>
+                                    <input type="email" value="mystore@gamil.com">
+                                    <span>Receives messages about your store. For sender email, go to <a href="#">notification settings</a>.</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="setting-popup__content-card">
+                        <div class="setting-popup__content-card__header">
+                            <h2>Billing information</h2>
+                            <button onclick="editBillingDetail(this)">Edit</button>
+                        </div>
+                        <div class="setting-popup__content-card__body">
+                            <div class="info__form-group">
+                                <div class="store__info">
+                                    <span>Business address</span>
+                                    <h2>Pakistan</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="editBillingDetailCard" class="setting-popup__content-card__body editing-card">
+                            <div class="info__form-group">
+                                <div class="form__group">
+                                    <label>Legal business name</label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="store-address__card">
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>Country/region</label>
+                                        <select>
+                                            <option>Pakistan</option>
+                                            <option>Oman</option>
+                                            <option>United States</option>
+                                            <option>United Kingdom</option>
+                                            <option>Turkey</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>Address</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>Apartment, suite, etc.</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="store-info__row">
+                                    <div class="info__form-group">
+                                        <div class="form__group">
+                                            <label>City</label>
+                                            <input type="text" class="custom-input">
+                                        </div>
+                                    </div>
+                                    <div class="info__form-group">
+                                        <div class="form__group">
+                                            <label>Postal code</label>
+                                            <input type="text">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="setting-popup__content-card">
+                        <div class="setting-popup__content-card__header header-style--second">
+                            <h2>Store currency</h2>
+                            <span>The currency your products are sold in. For your payout currency, go to <a href="#">payments settings.</a></span>
+                        </div>
+                        <div class="setting-popup__content-card__body">
+                            <div class="store-info__options">
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>Store currency</label>
+                                        <select><option value="USD">US dollars (USD)</option><option value="EUR">euros (EUR)</option><option value="GBP">British pounds (GBP)</option><option value="CAD">Canadian dollars (CAD)</option><option value="AFN">Afghan Afghanis (AFN)</option><option value="ALL">Albanian lekë (ALL)</option><option value="DZD">Algerian dinars (DZD)</option><option value="AOA">Angolan kwanzas (AOA)</option><option value="ARS">Argentine pesos (ARS)</option><option value="AMD">Armenian drams (AMD)</option><option value="AWG">Aruban florin (AWG)</option><option value="AUD">Australian dollars (AUD)</option><option value="BBD">Barbadian dollars (BBD)</option><option value="AZN">Azerbaijani manats (AZN)</option><option value="BDT">Bangladeshi takas (BDT)</option><option value="BSD">Bahamian dollars (BSD)</option><option value="BHD">Bahraini dinars (BHD)</option><option value="BIF">Burundian francs (BIF)</option><option value="BZD">Belize dollars (BZD)</option><option value="BMD">Bermudan dollars (BMD)</option><option value="BTN">Bhutanese ngultrums (BTN)</option><option value="BAM">Bosnia-Herzegovina convertible marks (BAM)</option><option value="BRL">Brazilian reals (BRL)</option><option value="BOB">Bolivian bolivianos (BOB)</option><option value="BWP">Botswanan pulas (BWP)</option><option value="BND">Brunei dollars (BND)</option><option value="BGN">Bulgarian leva (BGN)</option><option value="MMK">Myanmar kyats (MMK)</option><option value="KHR">Cambodian riels (KHR)</option><option value="CVE">Cape Verdean escudos (CVE)</option><option value="KYD">Cayman Islands dollars (KYD)</option><option value="XAF">Central African CFA francs (XAF)</option><option value="CLP">Chilean pesos (CLP)</option><option value="CNY">Chinese yuan (CNY)</option><option value="COP">Colombian pesos (COP)</option><option value="KMF">Comorian francs (KMF)</option><option value="CDF">Congolese francs (CDF)</option><option value="CRC">Costa Rican colóns (CRC)</option><option value="HRK">Croatian kunas (HRK)</option><option value="CZK">Czech korunas (CZK)</option><option value="DKK">Danish kroner (DKK)</option><option value="DOP">Dominican pesos (DOP)</option><option value="XCD">East Caribbean dollars (XCD)</option><option value="EGP">Egyptian pounds (EGP)</option><option value="ETB">Ethiopian birrs (ETB)</option><option value="XPF">CFP francs (XPF)</option><option value="FJD">Fijian dollars (FJD)</option><option value="GMD">Gambian dalasis (GMD)</option><option value="GHS">Ghanaian cedis (GHS)</option><option value="GTQ">Guatemalan quetzals (GTQ)</option><option value="GYD">Guyanaese dollars (GYD)</option><option value="GEL">Georgian laris (GEL)</option><option value="HTG">Haitian gourdes (HTG)</option><option value="HNL">Honduran lempiras (HNL)</option><option value="HKD">Hong Kong dollars (HKD)</option><option value="HUF">Hungarian forints (HUF)</option><option value="ISK">Icelandic krónur (ISK)</option><option value="INR">Indian rupees (INR)</option><option value="IDR">Indonesian rupiahs (IDR)</option><option value="ILS">Israeli new shekels (ILS)</option><option value="IQD">Iraqi dinars (IQD)</option><option value="JMD">Jamaican dollars (JMD)</option><option value="JPY">Japanese yen (JPY)</option><option value="JEP">JEP (JEP)</option><option value="JOD">Jordanian dinars (JOD)</option><option value="KZT">Kazakhstani tenges (KZT)</option><option value="KES">Kenyan shillings (KES)</option><option value="KWD">Kuwaiti dinars (KWD)</option><option value="KGS">Kyrgystani soms (KGS)</option><option value="LAK">Laotian kips (LAK)</option><option value="LVL">LVL (LVL)</option><option value="LBP">Lebanese pounds (LBP)</option><option value="LSL">Lesotho lotis (LSL)</option><option value="LRD">Liberian dollars (LRD)</option><option value="LTL">LTL (LTL)</option><option value="MGA">Malagasy ariaries (MGA)</option><option value="MKD">Macedonian denari (MKD)</option><option value="MOP">Macanese patacas (MOP)</option><option value="MWK">Malawian kwachas (MWK)</option><option value="MVR">Maldivian rufiyaas (MVR)</option><option value="MXN">Mexican pesos (MXN)</option><option value="MYR">Malaysian ringgits (MYR)</option><option value="MUR">Mauritian rupees (MUR)</option><option value="MDL">Moldovan lei (MDL)</option><option value="MAD">Moroccan dirhams (MAD)</option><option value="MNT">Mongolian tugriks (MNT)</option><option value="MZN">Mozambican meticals (MZN)</option><option value="NAD">Namibian dollars (NAD)</option><option value="NPR">Nepalese rupees (NPR)</option><option value="ANG">Netherlands Antillean guilders (ANG)</option><option value="NZD">New Zealand dollars (NZD)</option><option value="NIO">Nicaraguan córdobas (NIO)</option><option value="NGN">Nigerian nairas (NGN)</option><option value="NOK">Norwegian kroner (NOK)</option><option value="OMR">Omani rials (OMR)</option><option value="PAB">Panamanian balboas (PAB)</option><option value="PKR">Pakistani rupees (PKR)</option><option value="PGK">Papua New Guinean kina (PGK)</option><option value="PYG">Paraguayan guaranis (PYG)</option><option value="PEN">Peruvian soles (PEN)</option><option value="PHP">Philippine pesos (PHP)</option><option value="PLN">Polish zlotys (PLN)</option><option value="QAR">Qatari riyals (QAR)</option><option value="RON">Romanian lei (RON)</option><option value="RUB">Russian rubles (RUB)</option><option value="RWF">Rwandan francs (RWF)</option><option value="WST">Samoan tala (WST)</option><option value="SAR">Saudi riyals (SAR)</option><option value="RSD">Serbian dinars (RSD)</option><option value="SCR">Seychellois rupees (SCR)</option><option value="SGD">Singapore dollars (SGD)</option><option value="SDG">Sudanese pounds (SDG)</option><option value="SYP">Syrian pounds (SYP)</option><option value="ZAR">South African rand (ZAR)</option><option value="KRW">South Korean won (KRW)</option><option value="SSP">South Sudanese pounds (SSP)</option><option value="SBD">Solomon Islands dollars (SBD)</option><option value="LKR">Sri Lankan rupees (LKR)</option><option value="SRD">Surinamese dollars (SRD)</option><option value="SZL">Swazi emalangeni (SZL)</option><option value="SEK">Swedish kronor (SEK)</option><option value="CHF">Swiss francs (CHF)</option><option value="TWD">New Taiwan dollars (TWD)</option><option value="THB">Thai baht (THB)</option><option value="TZS">Tanzanian shillings (TZS)</option><option value="TTD">Trinidad &amp; Tobago dollars (TTD)</option><option value="TND">Tunisian dinars (TND)</option><option value="TRY">Turkish Lira (TRY)</option><option value="TMT">Turkmenistani manat (TMT)</option><option value="UGX">Ugandan shillings (UGX)</option><option value="UAH">Ukrainian hryvnias (UAH)</option><option value="AED">UAE dirhams (AED)</option><option value="UYU">Uruguayan pesos (UYU)</option><option value="UZS">Uzbekistani som (UZS)</option><option value="VUV">Vanuatu vatus (VUV)</option><option value="VND">Vietnamese dong (VND)</option><option value="XOF">West African CFA francs (XOF)</option><option value="YER">Yemeni rials (YER)</option><option value="ZMW">Zambian kwachas (ZMW)</option><option value="BYN">Belarusian rubles (BYN)</option><option value="BYR">BYR (BYR)</option><option value="DJF">Djiboutian francs (DJF)</option><option value="ERN">Eritrean nakfas (ERN)</option><option value="FKP">Falkland Islands pounds (FKP)</option><option value="GIP">Gibraltar pounds (GIP)</option><option value="GNF">Guinean francs (GNF)</option><option value="IRR">Iranian rials (IRR)</option><option value="KID">KID (KID)</option><option value="LYD">Libyan dinars (LYD)</option><option value="MRU">Mauritanian ouguiyas (MRU)</option><option value="SLL">Sierra Leonean leones (1964—2 (SLL)</option><option value="SHP">St. Helena pounds (SHP)</option><option value="SOS">Somali shillings (SOS)</option><option value="STD">STD (STD)</option><option value="STN">São Tomé &amp; Príncipe dobras (STN)</option><option value="TJS">Tajikistani somonis (TJS)</option><option value="TOP">Tongan paʻanga (TOP)</option><option value="VED">VED (VED)</option><option value="VEF">VEF (VEF)</option><option value="VES">Venezuelan bolívars (VES)</option><option value="XXX">XXX (XXX)</option></select>
+                                    </div>
+                                </div>
+                                <button onclick="editCurrencyDetail(this)" class="editBtn">Change formatting</button>
+                            </div>
+
+                        </div>
+
+                        <div id="editCurrencyDetailCard" class="setting-popup__content-card__body editing-card">
+                            <div class="currency-formatting-card">
+                                <h4>Currency formatting</h4>
+                                <span>Change how currencies are displayed on your store. {{amount}} and {{amount_no_decimals}} will be replaced with the price of your product.</span>
+                            </div>
+                            <div class="store-info__row">
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>HTML with currency</label>
+                                        <input type="text" value="Rs.{{amount}} PKR" class="custom-input">
+                                    </div>
+                                </div>
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>HTML without currency</label>
+                                        <input type="text" value="Rs.{{amount}}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="store-info__row">
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>Email with currency</label>
+                                        <input type="text" value="Rs.{{amount}} PKR" class="custom-input">
+                                    </div>
+                                </div>
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>Email without currency</label>
+                                        <input type="text" value="Rs.{{amount}}" >
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="setting-popup__content-card">
+                        <div class="setting-popup__content-card__header header-style--second">
+                            <h2>Time zone and units of measurement</h2>
+                            <span>Used to calculate product prices, shipping weights, and order times.</span>
+                        </div>
+                        <div class="setting-popup__content-card__body">
+                            <div class="timeZone--options">
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>Time zone</label>
+                                        <select><option value="Etc/GMT+12">(GMT-12:00) International Date Line West</option><option value="Pacific/Pago_Pago">(GMT-11:00) American Samoa</option><option value="Pacific/Midway">(GMT-11:00) Midway Island</option><option value="Pacific/Honolulu">(GMT-10:00) Hawaii</option><option value="America/Juneau">(GMT-09:00) Alaska</option><option value="America/Los_Angeles">(GMT-08:00) Pacific Time (US &amp; Canada)</option><option value="America/Tijuana">(GMT-08:00) Tijuana</option><option value="America/Phoenix">(GMT-07:00) Arizona</option><option value="America/Mazatlan">(GMT-07:00) Mazatlan</option><option value="America/Denver">(GMT-07:00) Mountain Time (US &amp; Canada)</option><option value="America/Guatemala">(GMT-06:00) Central America</option><option value="America/Chicago">(GMT-06:00) Central Time (US &amp; Canada)</option><option value="America/Chihuahua">(GMT-07:00) Chihuahua</option><option value="America/Mexico_City">(GMT-06:00) Guadalajara, Mexico City</option><option value="America/Monterrey">(GMT-06:00) Monterrey</option><option value="America/Regina">(GMT-06:00) Saskatchewan</option><option value="America/Bogota">(GMT-05:00) Bogota</option><option value="America/New_York">(GMT-05:00) Eastern Time (US &amp; Canada)</option><option value="America/Indiana/Indianapolis">(GMT-05:00) Indiana (East)</option><option value="America/Lima">(GMT-05:00) Lima, Quito</option><option value="America/Halifax">(GMT-04:00) Atlantic Time (Canada)</option><option value="America/Caracas">(GMT-04:00) Caracas</option><option value="America/Guyana">(GMT-04:00) Georgetown</option><option value="America/La_Paz">(GMT-04:00) La Paz</option><option value="America/Puerto_Rico">(GMT-04:00) Puerto Rico</option><option value="America/Santiago">(GMT-04:00) Santiago</option><option value="America/St_Johns">(GMT-03:30) Newfoundland</option><option value="America/Sao_Paulo">(GMT-03:00) Brasilia</option><option value="America/Argentina/Buenos_Aires">(GMT-03:00) Buenos Aires</option><option value="America/Godthab">(GMT-03:00) Greenland</option><option value="America/Montevideo">(GMT-03:00) Montevideo</option><option value="Atlantic/South_Georgia">(GMT-02:00) Mid-Atlantic</option><option value="Atlantic/Azores">(GMT-01:00) Azores</option><option value="Atlantic/Cape_Verde">(GMT-01:00) Cape Verde Is.</option><option value="Europe/London">(GMT+00:00) Edinburgh, London</option><option value="Europe/Lisbon">(GMT+00:00) Lisbon</option><option value="Africa/Monrovia">(GMT+00:00) Monrovia</option><option value="Etc/UTC">(GMT+00:00) UTC</option><option value="Europe/Amsterdam">(GMT+01:00) Amsterdam</option><option value="Europe/Belgrade">(GMT+01:00) Belgrade</option><option value="Europe/Berlin">(GMT+01:00) Berlin</option><option value="Europe/Zurich">(GMT+01:00) Bern, Zurich</option><option value="Europe/Bratislava">(GMT+01:00) Bratislava</option><option value="Europe/Brussels">(GMT+01:00) Brussels</option><option value="Europe/Budapest">(GMT+01:00) Budapest</option><option value="Africa/Casablanca">(GMT+01:00) Casablanca</option><option value="Europe/Copenhagen">(GMT+01:00) Copenhagen</option><option value="Europe/Dublin">(GMT+00:00) Dublin</option><option value="Europe/Ljubljana">(GMT+01:00) Ljubljana</option><option value="Europe/Madrid">(GMT+01:00) Madrid</option><option value="Europe/Paris">(GMT+01:00) Paris</option><option value="Europe/Prague">(GMT+01:00) Prague</option><option value="Europe/Rome">(GMT+01:00) Rome</option><option value="Europe/Sarajevo">(GMT+01:00) Sarajevo</option><option value="Europe/Skopje">(GMT+01:00) Skopje</option><option value="Europe/Stockholm">(GMT+01:00) Stockholm</option><option value="Europe/Vienna">(GMT+01:00) Vienna</option><option value="Europe/Warsaw">(GMT+01:00) Warsaw</option><option value="Africa/Algiers">(GMT+01:00) West Central Africa</option><option value="Europe/Zagreb">(GMT+01:00) Zagreb</option><option value="Europe/Athens">(GMT+02:00) Athens</option><option value="Europe/Bucharest">(GMT+02:00) Bucharest</option><option value="Africa/Cairo">(GMT+02:00) Cairo</option><option value="Africa/Harare">(GMT+02:00) Harare</option><option value="Europe/Helsinki">(GMT+02:00) Helsinki</option><option value="Asia/Jerusalem">(GMT+02:00) Jerusalem</option><option value="Europe/Kaliningrad">(GMT+02:00) Kaliningrad</option><option value="Europe/Kiev">(GMT+02:00) Kyiv</option><option value="Africa/Johannesburg">(GMT+02:00) Pretoria</option><option value="Europe/Riga">(GMT+02:00) Riga</option><option value="Europe/Sofia">(GMT+02:00) Sofia</option><option value="Europe/Tallinn">(GMT+02:00) Tallinn</option><option value="Europe/Vilnius">(GMT+02:00) Vilnius</option><option value="Asia/Baghdad">(GMT+03:00) Baghdad</option><option value="Europe/Istanbul">(GMT+03:00) Istanbul</option><option value="Asia/Kuwait">(GMT+03:00) Kuwait</option><option value="Europe/Minsk">(GMT+03:00) Minsk</option><option value="Europe/Moscow">(GMT+03:00) Moscow, St. Petersburg</option><option value="Africa/Nairobi">(GMT+03:00) Nairobi</option><option value="Asia/Riyadh">(GMT+03:00) Riyadh</option><option value="Europe/Volgograd">(GMT+03:00) Volgograd</option><option value="Asia/Tehran">(GMT+03:30) Tehran</option><option value="Asia/Muscat">(GMT+04:00) Abu Dhabi, Muscat</option><option value="Asia/Baku">(GMT+04:00) Baku</option><option value="Europe/Samara">(GMT+04:00) Samara</option><option value="Asia/Tbilisi">(GMT+04:00) Tbilisi</option><option value="Asia/Yerevan">(GMT+04:00) Yerevan</option><option value="Asia/Kabul">(GMT+04:30) Kabul</option><option value="Asia/Yekaterinburg">(GMT+05:00) Ekaterinburg</option><option value="Asia/Karachi">(GMT+05:00) Islamabad, Karachi</option><option value="Asia/Tashkent">(GMT+05:00) Tashkent</option><option value="Asia/Kolkata">(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option><option value="Asia/Colombo">(GMT+05:30) Sri Jayawardenepura</option><option value="Asia/Kathmandu">(GMT+05:45) Kathmandu</option><option value="Asia/Almaty">(GMT+06:00) Almaty</option><option value="Asia/Dhaka">(GMT+06:00) Astana, Dhaka</option><option value="Asia/Urumqi">(GMT+06:00) Urumqi</option><option value="Asia/Rangoon">(GMT+06:30) Rangoon</option><option value="Asia/Bangkok">(GMT+07:00) Bangkok, Hanoi</option><option value="Asia/Jakarta">(GMT+07:00) Jakarta</option><option value="Asia/Krasnoyarsk">(GMT+07:00) Krasnoyarsk</option><option value="Asia/Novosibirsk">(GMT+07:00) Novosibirsk</option><option value="Asia/Shanghai">(GMT+08:00) Beijing</option><option value="Asia/Chongqing">(GMT+08:00) Chongqing</option><option value="Asia/Hong_Kong">(GMT+08:00) Hong Kong</option><option value="Asia/Irkutsk">(GMT+08:00) Irkutsk</option><option value="Asia/Kuala_Lumpur">(GMT+08:00) Kuala Lumpur</option><option value="Australia/Perth">(GMT+08:00) Perth</option><option value="Asia/Singapore">(GMT+08:00) Singapore</option><option value="Asia/Taipei">(GMT+08:00) Taipei</option><option value="Asia/Ulaanbaatar">(GMT+08:00) Ulaanbaatar</option><option value="Asia/Tokyo">(GMT+09:00) Osaka, Sapporo, Tokyo</option><option value="Asia/Seoul">(GMT+09:00) Seoul</option><option value="Asia/Yakutsk">(GMT+09:00) Yakutsk</option><option value="Australia/Adelaide">(GMT+09:30) Adelaide</option><option value="Australia/Darwin">(GMT+09:30) Darwin</option><option value="Australia/Brisbane">(GMT+10:00) Brisbane</option><option value="Australia/Melbourne">(GMT+10:00) Canberra, Melbourne</option><option value="Pacific/Guam">(GMT+10:00) Guam</option><option value="Australia/Hobart">(GMT+10:00) Hobart</option><option value="Pacific/Port_Moresby">(GMT+10:00) Port Moresby</option><option value="Australia/Sydney">(GMT+10:00) Sydney</option><option value="Asia/Vladivostok">(GMT+10:00) Vladivostok</option><option value="Asia/Magadan">(GMT+11:00) Magadan</option><option value="Pacific/Noumea">(GMT+11:00) New Caledonia</option><option value="Pacific/Guadalcanal">(GMT+11:00) Solomon Is.</option><option value="Asia/Srednekolymsk">(GMT+11:00) Srednekolymsk</option><option value="Pacific/Auckland">(GMT+12:00) Auckland, Wellington</option><option value="Pacific/Fiji">(GMT+12:00) Fiji</option><option value="Asia/Kamchatka">(GMT+12:00) Kamchatka</option><option value="Pacific/Majuro">(GMT+12:00) Marshall Is.</option><option value="Pacific/Chatham">(GMT+12:45) Chatham Is.</option><option value="Pacific/Tongatapu">(GMT+13:00) Nuku'alofa</option><option value="Pacific/Apia">(GMT+13:00) Samoa</option><option value="Pacific/Fakaofo">(GMT+13:00) Tokelau Is.</option></select>
+                                    </div>
+                                </div>
+                                <div class="store-info__row">
+                                    <div class="info__form-group">
+                                        <div class="form__group">
+                                            <label>Unit system</label>
+                                            <select><option value="METRIC_SYSTEM">Metric system</option><option value="IMPERIAL_SYSTEM">Imperial system</option></select>
+                                        </div>
+                                    </div>
+                                    <div class="info__form-group">
+                                        <div class="form__group">
+                                            <label>Default weight unit</label>
+                                            <select><option value="KILOGRAMS">Kilogram (kg)</option><option value="GRAMS">Gram (g)</option></select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="setting-popup__content-card">
+                        <div class="setting-popup__content-card__header header-style--second">
+                            <h2>Order ID format</h2>
+                            <span>Shown on the Orders page, customer pages, and customer order notifications to identify orders.</span>
+                        </div>
+                        <div class="setting-popup__content-card__body">
+                            <p class="body--text">Customize your order ID format by changing the prefix or adding a suffix. Changes are applied to future orders.</p>
+                            <div class="timeZone--options">
+                                <div class="store-info__row marBotton">
+                                    <div class="info__form-group">
+                                        <div class="form__group">
+                                            <label>Prefix</label>
+                                            <input type="text" value="#" class="custom-input">
+                                        </div>
+                                    </div>
+                                    <div class="info__form-group">
+                                        <div class="form__group">
+                                            <label>Suffix</label>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="body--text">Your order ID will appear as #1001, #1002, #1003 ...</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="page__actionBtn">
+                        <button class="disabled__btn">Save</button>
+                    </div>
+                </div>
+
+                <div id="EditingPage" class="tabcontent">
+                    <div class="setting-popup__page-heading">
+                        <h2>Editing Page</h2>
+                    </div>
+                    <div class="setting-popup__content-card">
+                        <div class="setting-popup__content-card__header">
+                            <h2>Profile</h2>
+                        </div>
+                        <div class="setting-popup__content-card__body editstorePage">
+                            <div class="store-info__row">
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>Store Name</label>
+                                        <input type="text" value="My Store">
+                                        <span>Appears on your website.</span>
+                                    </div>
+                                </div>
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>Phone</label>
+                                        <input type="text" value="1234567890">
+                                        <span>Appears on your website.</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info__form-group">
+                                <div class="form__group">
+                                    <label>Email</label>
+                                    <input type="email" value="mystore@gamil.com">
+                                    <span>Receives messages about your store. For sender email, go to <a href="#">notification settings</a>.</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="setting-popup__content-card">
+                        <div class="setting-popup__content-card__header">
+                            <h2>Billing information</h2>
+                        </div>
+                        <div class="setting-popup__content-card__body editstorePage">
+                            <div class="info__form-group">
+                                <div class="form__group">
+                                    <label>Legal business name</label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="store-address__card">
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>Country/region</label>
+                                        <select>
+                                            <option>Pakistan</option>
+                                            <option>Oman</option>
+                                            <option>United States</option>
+                                            <option>United Kingdom</option>
+                                            <option>Turkey</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>Address</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>Apartment, suite, etc.</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="store-info__row">
+                                    <div class="info__form-group">
+                                        <div class="form__group">
+                                            <label>City</label>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="info__form-group">
+                                        <div class="form__group">
+                                            <label>Postal code</label>
+                                            <input type="text">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="setting-popup__content-card">
+                        <div class="setting-popup__content-card__header header-style--second">
+                            <h2>Store currency</h2>
+                            <span>The currency your products are sold in. For your payout currency, go to <a href="#">payments settings.</a></span>
+                        </div>
+                        <div class="setting-popup__content-card__body">
+                            <div class="store-info__options">
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>Store currency</label>
+                                        <select><option value="USD">US dollars (USD)</option><option value="EUR">euros (EUR)</option><option value="GBP">British pounds (GBP)</option><option value="CAD">Canadian dollars (CAD)</option><option value="AFN">Afghan Afghanis (AFN)</option><option value="ALL">Albanian lekë (ALL)</option><option value="DZD">Algerian dinars (DZD)</option><option value="AOA">Angolan kwanzas (AOA)</option><option value="ARS">Argentine pesos (ARS)</option><option value="AMD">Armenian drams (AMD)</option><option value="AWG">Aruban florin (AWG)</option><option value="AUD">Australian dollars (AUD)</option><option value="BBD">Barbadian dollars (BBD)</option><option value="AZN">Azerbaijani manats (AZN)</option><option value="BDT">Bangladeshi takas (BDT)</option><option value="BSD">Bahamian dollars (BSD)</option><option value="BHD">Bahraini dinars (BHD)</option><option value="BIF">Burundian francs (BIF)</option><option value="BZD">Belize dollars (BZD)</option><option value="BMD">Bermudan dollars (BMD)</option><option value="BTN">Bhutanese ngultrums (BTN)</option><option value="BAM">Bosnia-Herzegovina convertible marks (BAM)</option><option value="BRL">Brazilian reals (BRL)</option><option value="BOB">Bolivian bolivianos (BOB)</option><option value="BWP">Botswanan pulas (BWP)</option><option value="BND">Brunei dollars (BND)</option><option value="BGN">Bulgarian leva (BGN)</option><option value="MMK">Myanmar kyats (MMK)</option><option value="KHR">Cambodian riels (KHR)</option><option value="CVE">Cape Verdean escudos (CVE)</option><option value="KYD">Cayman Islands dollars (KYD)</option><option value="XAF">Central African CFA francs (XAF)</option><option value="CLP">Chilean pesos (CLP)</option><option value="CNY">Chinese yuan (CNY)</option><option value="COP">Colombian pesos (COP)</option><option value="KMF">Comorian francs (KMF)</option><option value="CDF">Congolese francs (CDF)</option><option value="CRC">Costa Rican colóns (CRC)</option><option value="HRK">Croatian kunas (HRK)</option><option value="CZK">Czech korunas (CZK)</option><option value="DKK">Danish kroner (DKK)</option><option value="DOP">Dominican pesos (DOP)</option><option value="XCD">East Caribbean dollars (XCD)</option><option value="EGP">Egyptian pounds (EGP)</option><option value="ETB">Ethiopian birrs (ETB)</option><option value="XPF">CFP francs (XPF)</option><option value="FJD">Fijian dollars (FJD)</option><option value="GMD">Gambian dalasis (GMD)</option><option value="GHS">Ghanaian cedis (GHS)</option><option value="GTQ">Guatemalan quetzals (GTQ)</option><option value="GYD">Guyanaese dollars (GYD)</option><option value="GEL">Georgian laris (GEL)</option><option value="HTG">Haitian gourdes (HTG)</option><option value="HNL">Honduran lempiras (HNL)</option><option value="HKD">Hong Kong dollars (HKD)</option><option value="HUF">Hungarian forints (HUF)</option><option value="ISK">Icelandic krónur (ISK)</option><option value="INR">Indian rupees (INR)</option><option value="IDR">Indonesian rupiahs (IDR)</option><option value="ILS">Israeli new shekels (ILS)</option><option value="IQD">Iraqi dinars (IQD)</option><option value="JMD">Jamaican dollars (JMD)</option><option value="JPY">Japanese yen (JPY)</option><option value="JEP">JEP (JEP)</option><option value="JOD">Jordanian dinars (JOD)</option><option value="KZT">Kazakhstani tenges (KZT)</option><option value="KES">Kenyan shillings (KES)</option><option value="KWD">Kuwaiti dinars (KWD)</option><option value="KGS">Kyrgystani soms (KGS)</option><option value="LAK">Laotian kips (LAK)</option><option value="LVL">LVL (LVL)</option><option value="LBP">Lebanese pounds (LBP)</option><option value="LSL">Lesotho lotis (LSL)</option><option value="LRD">Liberian dollars (LRD)</option><option value="LTL">LTL (LTL)</option><option value="MGA">Malagasy ariaries (MGA)</option><option value="MKD">Macedonian denari (MKD)</option><option value="MOP">Macanese patacas (MOP)</option><option value="MWK">Malawian kwachas (MWK)</option><option value="MVR">Maldivian rufiyaas (MVR)</option><option value="MXN">Mexican pesos (MXN)</option><option value="MYR">Malaysian ringgits (MYR)</option><option value="MUR">Mauritian rupees (MUR)</option><option value="MDL">Moldovan lei (MDL)</option><option value="MAD">Moroccan dirhams (MAD)</option><option value="MNT">Mongolian tugriks (MNT)</option><option value="MZN">Mozambican meticals (MZN)</option><option value="NAD">Namibian dollars (NAD)</option><option value="NPR">Nepalese rupees (NPR)</option><option value="ANG">Netherlands Antillean guilders (ANG)</option><option value="NZD">New Zealand dollars (NZD)</option><option value="NIO">Nicaraguan córdobas (NIO)</option><option value="NGN">Nigerian nairas (NGN)</option><option value="NOK">Norwegian kroner (NOK)</option><option value="OMR">Omani rials (OMR)</option><option value="PAB">Panamanian balboas (PAB)</option><option value="PKR">Pakistani rupees (PKR)</option><option value="PGK">Papua New Guinean kina (PGK)</option><option value="PYG">Paraguayan guaranis (PYG)</option><option value="PEN">Peruvian soles (PEN)</option><option value="PHP">Philippine pesos (PHP)</option><option value="PLN">Polish zlotys (PLN)</option><option value="QAR">Qatari riyals (QAR)</option><option value="RON">Romanian lei (RON)</option><option value="RUB">Russian rubles (RUB)</option><option value="RWF">Rwandan francs (RWF)</option><option value="WST">Samoan tala (WST)</option><option value="SAR">Saudi riyals (SAR)</option><option value="RSD">Serbian dinars (RSD)</option><option value="SCR">Seychellois rupees (SCR)</option><option value="SGD">Singapore dollars (SGD)</option><option value="SDG">Sudanese pounds (SDG)</option><option value="SYP">Syrian pounds (SYP)</option><option value="ZAR">South African rand (ZAR)</option><option value="KRW">South Korean won (KRW)</option><option value="SSP">South Sudanese pounds (SSP)</option><option value="SBD">Solomon Islands dollars (SBD)</option><option value="LKR">Sri Lankan rupees (LKR)</option><option value="SRD">Surinamese dollars (SRD)</option><option value="SZL">Swazi emalangeni (SZL)</option><option value="SEK">Swedish kronor (SEK)</option><option value="CHF">Swiss francs (CHF)</option><option value="TWD">New Taiwan dollars (TWD)</option><option value="THB">Thai baht (THB)</option><option value="TZS">Tanzanian shillings (TZS)</option><option value="TTD">Trinidad &amp; Tobago dollars (TTD)</option><option value="TND">Tunisian dinars (TND)</option><option value="TRY">Turkish Lira (TRY)</option><option value="TMT">Turkmenistani manat (TMT)</option><option value="UGX">Ugandan shillings (UGX)</option><option value="UAH">Ukrainian hryvnias (UAH)</option><option value="AED">UAE dirhams (AED)</option><option value="UYU">Uruguayan pesos (UYU)</option><option value="UZS">Uzbekistani som (UZS)</option><option value="VUV">Vanuatu vatus (VUV)</option><option value="VND">Vietnamese dong (VND)</option><option value="XOF">West African CFA francs (XOF)</option><option value="YER">Yemeni rials (YER)</option><option value="ZMW">Zambian kwachas (ZMW)</option><option value="BYN">Belarusian rubles (BYN)</option><option value="BYR">BYR (BYR)</option><option value="DJF">Djiboutian francs (DJF)</option><option value="ERN">Eritrean nakfas (ERN)</option><option value="FKP">Falkland Islands pounds (FKP)</option><option value="GIP">Gibraltar pounds (GIP)</option><option value="GNF">Guinean francs (GNF)</option><option value="IRR">Iranian rials (IRR)</option><option value="KID">KID (KID)</option><option value="LYD">Libyan dinars (LYD)</option><option value="MRU">Mauritanian ouguiyas (MRU)</option><option value="SLL">Sierra Leonean leones (1964—2 (SLL)</option><option value="SHP">St. Helena pounds (SHP)</option><option value="SOS">Somali shillings (SOS)</option><option value="STD">STD (STD)</option><option value="STN">São Tomé &amp; Príncipe dobras (STN)</option><option value="TJS">Tajikistani somonis (TJS)</option><option value="TOP">Tongan paʻanga (TOP)</option><option value="VED">VED (VED)</option><option value="VEF">VEF (VEF)</option><option value="VES">Venezuelan bolívars (VES)</option><option value="XXX">XXX (XXX)</option></select>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="setting-popup__content-card__body editstorePage">
+                            <div class="currency-formatting-card">
+                                <h4>Currency formatting</h4>
+                                <span>Change how currencies are displayed on your store. {{amount}} and {{amount_no_decimals}} will be replaced with the price of your product.</span>
+                            </div>
+                            <div class="store-info__row">
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>HTML with currency</label>
+                                        <input type="text" value="Rs.{{amount}} PKR">
+                                    </div>
+                                </div>
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>HTML without currency</label>
+                                        <input type="text" value="Rs.{{amount}}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="store-info__row">
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>Email with currency</label>
+                                        <input type="text" value="Rs.{{amount}} PKR">
+                                    </div>
+                                </div>
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>Email without currency</label>
+                                        <input type="text" value="Rs.{{amount}}">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="setting-popup__content-card">
+                        <div class="setting-popup__content-card__header header-style--second">
+                            <h2>Time zone and units of measurement</h2>
+                            <span>Used to calculate product prices, shipping weights, and order times.</span>
+                        </div>
+                        <div class="setting-popup__content-card__body">
+                            <div class="timeZone--options">
+                                <div class="info__form-group">
+                                    <div class="form__group">
+                                        <label>Time zone</label>
+                                        <select><option value="Etc/GMT+12">(GMT-12:00) International Date Line West</option><option value="Pacific/Pago_Pago">(GMT-11:00) American Samoa</option><option value="Pacific/Midway">(GMT-11:00) Midway Island</option><option value="Pacific/Honolulu">(GMT-10:00) Hawaii</option><option value="America/Juneau">(GMT-09:00) Alaska</option><option value="America/Los_Angeles">(GMT-08:00) Pacific Time (US &amp; Canada)</option><option value="America/Tijuana">(GMT-08:00) Tijuana</option><option value="America/Phoenix">(GMT-07:00) Arizona</option><option value="America/Mazatlan">(GMT-07:00) Mazatlan</option><option value="America/Denver">(GMT-07:00) Mountain Time (US &amp; Canada)</option><option value="America/Guatemala">(GMT-06:00) Central America</option><option value="America/Chicago">(GMT-06:00) Central Time (US &amp; Canada)</option><option value="America/Chihuahua">(GMT-07:00) Chihuahua</option><option value="America/Mexico_City">(GMT-06:00) Guadalajara, Mexico City</option><option value="America/Monterrey">(GMT-06:00) Monterrey</option><option value="America/Regina">(GMT-06:00) Saskatchewan</option><option value="America/Bogota">(GMT-05:00) Bogota</option><option value="America/New_York">(GMT-05:00) Eastern Time (US &amp; Canada)</option><option value="America/Indiana/Indianapolis">(GMT-05:00) Indiana (East)</option><option value="America/Lima">(GMT-05:00) Lima, Quito</option><option value="America/Halifax">(GMT-04:00) Atlantic Time (Canada)</option><option value="America/Caracas">(GMT-04:00) Caracas</option><option value="America/Guyana">(GMT-04:00) Georgetown</option><option value="America/La_Paz">(GMT-04:00) La Paz</option><option value="America/Puerto_Rico">(GMT-04:00) Puerto Rico</option><option value="America/Santiago">(GMT-04:00) Santiago</option><option value="America/St_Johns">(GMT-03:30) Newfoundland</option><option value="America/Sao_Paulo">(GMT-03:00) Brasilia</option><option value="America/Argentina/Buenos_Aires">(GMT-03:00) Buenos Aires</option><option value="America/Godthab">(GMT-03:00) Greenland</option><option value="America/Montevideo">(GMT-03:00) Montevideo</option><option value="Atlantic/South_Georgia">(GMT-02:00) Mid-Atlantic</option><option value="Atlantic/Azores">(GMT-01:00) Azores</option><option value="Atlantic/Cape_Verde">(GMT-01:00) Cape Verde Is.</option><option value="Europe/London">(GMT+00:00) Edinburgh, London</option><option value="Europe/Lisbon">(GMT+00:00) Lisbon</option><option value="Africa/Monrovia">(GMT+00:00) Monrovia</option><option value="Etc/UTC">(GMT+00:00) UTC</option><option value="Europe/Amsterdam">(GMT+01:00) Amsterdam</option><option value="Europe/Belgrade">(GMT+01:00) Belgrade</option><option value="Europe/Berlin">(GMT+01:00) Berlin</option><option value="Europe/Zurich">(GMT+01:00) Bern, Zurich</option><option value="Europe/Bratislava">(GMT+01:00) Bratislava</option><option value="Europe/Brussels">(GMT+01:00) Brussels</option><option value="Europe/Budapest">(GMT+01:00) Budapest</option><option value="Africa/Casablanca">(GMT+01:00) Casablanca</option><option value="Europe/Copenhagen">(GMT+01:00) Copenhagen</option><option value="Europe/Dublin">(GMT+00:00) Dublin</option><option value="Europe/Ljubljana">(GMT+01:00) Ljubljana</option><option value="Europe/Madrid">(GMT+01:00) Madrid</option><option value="Europe/Paris">(GMT+01:00) Paris</option><option value="Europe/Prague">(GMT+01:00) Prague</option><option value="Europe/Rome">(GMT+01:00) Rome</option><option value="Europe/Sarajevo">(GMT+01:00) Sarajevo</option><option value="Europe/Skopje">(GMT+01:00) Skopje</option><option value="Europe/Stockholm">(GMT+01:00) Stockholm</option><option value="Europe/Vienna">(GMT+01:00) Vienna</option><option value="Europe/Warsaw">(GMT+01:00) Warsaw</option><option value="Africa/Algiers">(GMT+01:00) West Central Africa</option><option value="Europe/Zagreb">(GMT+01:00) Zagreb</option><option value="Europe/Athens">(GMT+02:00) Athens</option><option value="Europe/Bucharest">(GMT+02:00) Bucharest</option><option value="Africa/Cairo">(GMT+02:00) Cairo</option><option value="Africa/Harare">(GMT+02:00) Harare</option><option value="Europe/Helsinki">(GMT+02:00) Helsinki</option><option value="Asia/Jerusalem">(GMT+02:00) Jerusalem</option><option value="Europe/Kaliningrad">(GMT+02:00) Kaliningrad</option><option value="Europe/Kiev">(GMT+02:00) Kyiv</option><option value="Africa/Johannesburg">(GMT+02:00) Pretoria</option><option value="Europe/Riga">(GMT+02:00) Riga</option><option value="Europe/Sofia">(GMT+02:00) Sofia</option><option value="Europe/Tallinn">(GMT+02:00) Tallinn</option><option value="Europe/Vilnius">(GMT+02:00) Vilnius</option><option value="Asia/Baghdad">(GMT+03:00) Baghdad</option><option value="Europe/Istanbul">(GMT+03:00) Istanbul</option><option value="Asia/Kuwait">(GMT+03:00) Kuwait</option><option value="Europe/Minsk">(GMT+03:00) Minsk</option><option value="Europe/Moscow">(GMT+03:00) Moscow, St. Petersburg</option><option value="Africa/Nairobi">(GMT+03:00) Nairobi</option><option value="Asia/Riyadh">(GMT+03:00) Riyadh</option><option value="Europe/Volgograd">(GMT+03:00) Volgograd</option><option value="Asia/Tehran">(GMT+03:30) Tehran</option><option value="Asia/Muscat">(GMT+04:00) Abu Dhabi, Muscat</option><option value="Asia/Baku">(GMT+04:00) Baku</option><option value="Europe/Samara">(GMT+04:00) Samara</option><option value="Asia/Tbilisi">(GMT+04:00) Tbilisi</option><option value="Asia/Yerevan">(GMT+04:00) Yerevan</option><option value="Asia/Kabul">(GMT+04:30) Kabul</option><option value="Asia/Yekaterinburg">(GMT+05:00) Ekaterinburg</option><option value="Asia/Karachi">(GMT+05:00) Islamabad, Karachi</option><option value="Asia/Tashkent">(GMT+05:00) Tashkent</option><option value="Asia/Kolkata">(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option><option value="Asia/Colombo">(GMT+05:30) Sri Jayawardenepura</option><option value="Asia/Kathmandu">(GMT+05:45) Kathmandu</option><option value="Asia/Almaty">(GMT+06:00) Almaty</option><option value="Asia/Dhaka">(GMT+06:00) Astana, Dhaka</option><option value="Asia/Urumqi">(GMT+06:00) Urumqi</option><option value="Asia/Rangoon">(GMT+06:30) Rangoon</option><option value="Asia/Bangkok">(GMT+07:00) Bangkok, Hanoi</option><option value="Asia/Jakarta">(GMT+07:00) Jakarta</option><option value="Asia/Krasnoyarsk">(GMT+07:00) Krasnoyarsk</option><option value="Asia/Novosibirsk">(GMT+07:00) Novosibirsk</option><option value="Asia/Shanghai">(GMT+08:00) Beijing</option><option value="Asia/Chongqing">(GMT+08:00) Chongqing</option><option value="Asia/Hong_Kong">(GMT+08:00) Hong Kong</option><option value="Asia/Irkutsk">(GMT+08:00) Irkutsk</option><option value="Asia/Kuala_Lumpur">(GMT+08:00) Kuala Lumpur</option><option value="Australia/Perth">(GMT+08:00) Perth</option><option value="Asia/Singapore">(GMT+08:00) Singapore</option><option value="Asia/Taipei">(GMT+08:00) Taipei</option><option value="Asia/Ulaanbaatar">(GMT+08:00) Ulaanbaatar</option><option value="Asia/Tokyo">(GMT+09:00) Osaka, Sapporo, Tokyo</option><option value="Asia/Seoul">(GMT+09:00) Seoul</option><option value="Asia/Yakutsk">(GMT+09:00) Yakutsk</option><option value="Australia/Adelaide">(GMT+09:30) Adelaide</option><option value="Australia/Darwin">(GMT+09:30) Darwin</option><option value="Australia/Brisbane">(GMT+10:00) Brisbane</option><option value="Australia/Melbourne">(GMT+10:00) Canberra, Melbourne</option><option value="Pacific/Guam">(GMT+10:00) Guam</option><option value="Australia/Hobart">(GMT+10:00) Hobart</option><option value="Pacific/Port_Moresby">(GMT+10:00) Port Moresby</option><option value="Australia/Sydney">(GMT+10:00) Sydney</option><option value="Asia/Vladivostok">(GMT+10:00) Vladivostok</option><option value="Asia/Magadan">(GMT+11:00) Magadan</option><option value="Pacific/Noumea">(GMT+11:00) New Caledonia</option><option value="Pacific/Guadalcanal">(GMT+11:00) Solomon Is.</option><option value="Asia/Srednekolymsk">(GMT+11:00) Srednekolymsk</option><option value="Pacific/Auckland">(GMT+12:00) Auckland, Wellington</option><option value="Pacific/Fiji">(GMT+12:00) Fiji</option><option value="Asia/Kamchatka">(GMT+12:00) Kamchatka</option><option value="Pacific/Majuro">(GMT+12:00) Marshall Is.</option><option value="Pacific/Chatham">(GMT+12:45) Chatham Is.</option><option value="Pacific/Tongatapu">(GMT+13:00) Nuku'alofa</option><option value="Pacific/Apia">(GMT+13:00) Samoa</option><option value="Pacific/Fakaofo">(GMT+13:00) Tokelau Is.</option></select>
+                                    </div>
+                                </div>
+                                <div class="store-info__row">
+                                    <div class="info__form-group">
+                                        <div class="form__group">
+                                            <label>Unit system</label>
+                                            <select><option value="METRIC_SYSTEM">Metric system</option><option value="IMPERIAL_SYSTEM">Imperial system</option></select>
+                                        </div>
+                                    </div>
+                                    <div class="info__form-group">
+                                        <div class="form__group">
+                                            <label>Default weight unit</label>
+                                            <select><option value="KILOGRAMS">Kilogram (kg)</option><option value="GRAMS">Gram (g)</option></select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="setting-popup__content-card">
+                        <div class="setting-popup__content-card__header header-style--second">
+                            <h2>Order ID format</h2>
+                            <span>Shown on the Orders page, customer pages, and customer order notifications to identify orders.</span>
+                        </div>
+                        <div class="setting-popup__content-card__body">
+                            <p class="body--text">Customize your order ID format by changing the prefix or adding a suffix. Changes are applied to future orders.</p>
+                            <div class="timeZone--options">
+                                <div class="store-info__row marBotton">
+                                    <div class="info__form-group">
+                                        <div class="form__group">
+                                            <label>Prefix</label>
+                                            <input type="text" value="#">
+                                        </div>
+                                    </div>
+                                    <div class="info__form-group">
+                                        <div class="form__group">
+                                            <label>Suffix</label>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="body--text">Your order ID will appear as #1001, #1002, #1003 ...</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="page__actionBtn">
+                        <button class="disabled__btn">Save</button>
+                    </div>
+                </div>
+
+                <div id="transferOwnership" class="tabcontent">
+                    <div class="setting-popup__page-heading">
+                        <h2>Users and permissions</h2>
+                    </div>
+                    <div class="setting-popup__content-card">
+                        <div class="setting-popup__content-card__header">
+                            <h2>Store owner</h2>
+                            <button id="transferOwnsershipPopupBtn">Transfer ownership</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- End of Settings PopUp Page -->
+
+
+<!--Transfer Ownership Model -->
+<div id="transferOwnsershipPopupModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal__content modal__content--manage-tags">
+        <div class="modal__header">
+            <span class="close-five">&times;</span>
+            <h2>Transfer store ownership</h2>
+        </div>
+        <div class="modal__body">
+            <div class="transfer-ownership__content">
+                <div class="transfer-warning">
+                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg_375hu" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M10 0c-5.514 0-10 4.486-10 10s4.486 10 10 10 10-4.486 10-10-4.486-10-10-10zm-1 6a1 1 0 1 1 2 0v4a1 1 0 1 1-2 0v-4zm1 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path></svg>
+                    <p>When the transfer is complete, you will lose your unrestricted access to the store.</p>
+                </div>
+
+                <div class="owner-authorities">
+                    <p>The new store owner will be able to:</p>
+                    <ul>
+                        <li>Remove you from the store or change your permissions</li>
+                        <li>View or edit credit card and banking information</li>
+                        <li>Pause or close the store</li>
+                    </ul>
+                </div>
+                <div class="new-owner-form">
+                    <h3>NEW STORE OWNER</h3>
+                    <div class="info__form-group store-owner">
+                        <div class="form__group">
+                            <label>Email</label>
+                            <input type="email">
+                        </div>
+                    </div>
+                    <div class="store-info__row">
+                        <div class="info__form-group store-owner">
+                            <div class="form__group">
+                                <label>First Name</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="info__form-group store-owner">
+                            <div class="form__group">
+                                <label>Last Name</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info__form-group store-owner">
+                        <div class="form__group">
+                            <label>Enter your password to confirm:</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal__footer--actions">
+            <button class="border__btn">Cancel</button>
+            <button class="primary__btn">Transfer store ownership</button>
+        </div>
+
+    </div>
+</div>
+<!-- End of Transfer Ownership Model -->
+
+
+
+
+
+<script src="Js/Custom.js"></script>
+<script>
+    function openCity(evt, cityName) {
+        let i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    /*
+  ***************************************************************
+  Add Setting popup model on All Pages
+  ***************************************************************
+  */
+    // Get the modal
+    let settingPopupModal = document.getElementById("settingPopupModal");
+
+    // Get the button that opens the modal
+    let settingPopupBtn = document.getElementById("settingPopupBtn");
+
+    // Get the <span> element that closes the modal
+    let settingPopupSpan = document.getElementsByClassName("close-four")[0];
+
+    // When the user clicks the button, open the modal
+    settingPopupBtn.onclick = function() {
+        settingPopupModal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    settingPopupSpan.onclick = function() {
+        settingPopupModal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == settingPopupModal) {
+            settingPopupModal.style.display = "none";
+        }
+    }
+
+
+
+    /*
+ ***************************************************************
+ Add Transfer Ownership popup model on All Pages
+ ***************************************************************
+ */
+    // Get the modal
+    let transferOwnsershipPopupModal = document.getElementById("transferOwnsershipPopupModal");
+
+    // Get the button that opens the modal
+    let transferOwnsershipPopupBtn = document.getElementById("transferOwnsershipPopupBtn");
+
+    // Get the <span> element that closes the modal
+    let transferOwnsershipPopupSpan = document.getElementsByClassName("close-five")[0];
+
+    // When the user clicks the button, open the modal
+    transferOwnsershipPopupBtn.onclick = function() {
+        transferOwnsershipPopupModal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    transferOwnsershipPopupSpan.onclick = function() {
+        transferOwnsershipPopupModal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == transferOwnsershipPopupModal) {
+            transferOwnsershipPopupModal.style.display = "none";
+        }
+    }
+
+
+</script>
+
+<script>
+    /*
+    ***************************************************************
+    PopUp Accordion for Setup guide on home page
+    ***************************************************************
+    */
+    let popup = document.getElementsByClassName("guidePopUp__accordion-title");
+    let a;
+
+    for (a = 0; a < popup.length; a++) {
+        popup[a].addEventListener("click", function () {
+
+            let guidePopUp__panel = this.nextElementSibling;
+            if (guidePopUp__panel.style.maxHeight) {
+                guidePopUp__panel.style.maxHeight = null;
+            } else {
+                let active = document.querySelectorAll(".guidePopUp__accordion .guidePopUp__accordion-title.active");
+                for (let b = 0; b < active.length; b++) {
+                    active[b].classList.remove("active");
+                    active[b].nextElementSibling.style.maxHeight = null;
+                }
+                this.classList.toggle("active");
+                guidePopUp__panel.style.maxHeight = guidePopUp__panel.scrollHeight + "px";
+            }
+        });
+    }
+    popup[0].click();
+</script>
+
+</body>
+</html>
