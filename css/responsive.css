@@ -93,6 +93,12 @@ Screen Size max-1024px
     .settingPopup-left-column {
         width: 25%;
     }
+    .modal__content {
+        width: 90%;
+    }
+    span.recommended__app__detail {
+        white-space: unset;
+    }
 }
 /*
 ***************************************************************
@@ -271,7 +277,13 @@ Screen Size max-768
         height: unset;
         margin-right: 20px;
     }
+    li.apps-section__card:last-child {
+        margin-right: 0;
+    }
     .apps__section {
+        overflow: hidden;
+    }
+    ul.apps__container {
         overflow: auto;
     }
     .navbar--mobile {
@@ -282,6 +294,13 @@ Screen Size max-768
     }
     .modal__body.settingPopup-body {
         height: 890px;
+    }
+    ul.apps-section__container.recommended-apps-container {
+        display: block;
+    }
+    ul.apps-section__container.recommended-apps-container li.apps-section__card {
+        width: 100%;
+        margin: 0 0 10px 0;
     }
 }
 /*
@@ -312,6 +331,13 @@ Screen Size max-540
     }
     .modal-content.modal__content--manage-tags {
         width: 100%;
+    }
+    .modal__content {
+        width: 100%;
+        border-radius: 0;
+    }
+    span.recommended__app__detail {
+        white-space: unset;
     }
 }
 /*

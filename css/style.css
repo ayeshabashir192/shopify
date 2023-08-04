@@ -961,7 +961,7 @@ Settings Popup Model Style
     background: var(--grey-bg-color);
     display: flex;
     padding: 20px 100px;
-    height: 500px;
+    height: 100%;
 }
 .settingPopup-left-column {
     background: var(--white);
@@ -1132,7 +1132,7 @@ div#editBillingDetailCard {
     display: block;
 }
 .store-info__row .info__form-group input {
-    width: 96% !important;
+    width: 93% !important;
 }
 div#editBillingDetailCard .info__form-group {
     margin-bottom: 20px;
@@ -1234,7 +1234,10 @@ div#editCurrencyDetailCard .store-info__row:last-child {
 .info__form-group.store-owner {
     display: block;
 }
-.store-info__row .info__form-group.store-owner input {
+.store-info__row .info__form-group.store-owner.left-col input {
+    width: 89% !important;
+}
+.store-info__row .info__form-group.store-owner input{
     width: 95% !important;
 }
 .owner-authorities {
@@ -2070,7 +2073,7 @@ button.mediaBtn--borderless {
     position: absolute;
     width: 20px;
     top: 32px;
-    right: 5px;
+    right: 5%;
     fill: var(--color-icon);
 }
 .toggle--text {
@@ -2319,6 +2322,9 @@ span.foundedTags {
 .searchEngine--content span {
     color: var(--color-text-subdued);
     font-size: var(--font-size-small);
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
 }
 .searchEngine--content .form__group input {
     margin-bottom: 5px;
