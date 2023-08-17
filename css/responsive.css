@@ -56,7 +56,7 @@ Screen Size max-1024px
     section.page-content-wrapper {
         width: 76%;
     }
-    .page-content-section {
+    .page-content__section {
         padding: 0 30px;
     }
     .searchbar__card {
@@ -67,23 +67,23 @@ Screen Size max-1024px
     .guide__card {
         right: 25px;
     }
-    .productpage-main-content-section {
+    .page-content__section--product-content__main {
         display: block;
     }
-    .leftCol {
+    .column.column--left {
         width: 100%;
     }
-    .rightCol {
+    .right-col {
         width: 100%;
         margin: 20px 0;
     }
-    .page-content-section.innerpages.productpage {
+    .page-content__section.page-content__section--inner.page-content__section--product {
         padding: 30px;
     }
     .modal-content.modal__content--manage-tags {
         width: 55%;
     }
-    .Col__card--body label span {
+    .card__body label span {
         right: 70px;
     }
     .modal__body.settingPopup-body {
@@ -109,19 +109,19 @@ Screen Size max-991px and min-860px
     .modal-content.modal__content--manage-tags {
         width: 65%;
     }
-    .Col__card--body ul li svg {
+    .card__body ul li svg {
         right: 60px;
     }
     .modal__body.settingPopup-body {
         height: 1240px;
     }
-    .info__form-group .form__group select {
+    .info__form-group .form-group select {
         width: 96% !important;
     }
     .store-info__row .info__form-group input {
         width: 93% !important;
     }
-    .store-info__row.marBotton .info__form-group .form__group input {
+    .store-info__row.marBotton .info__form-group .form-group input {
         width: 90% !important;
     }
 }
@@ -141,7 +141,7 @@ Screen Size max-860
     .modal-content {
         width: 95%;
     }
-    .page-content-section__select-plan-btns {
+    .page-content__section__select-plan-btns {
         margin-top: 10px;
     }
     .guidePopUp__taskbar p {
@@ -162,7 +162,7 @@ Screen Size max-860
     .modal-content.modal__content--manage-tags {
         width: 70%;
     }
-    .form__group.smallgroup input {
+    .form-group.form-group--small input {
         padding-left: 35px;
         width: 75%;
     }
@@ -176,11 +176,11 @@ Screen Size max-768
 ***************************************************************
 */
 @media (max-width: 768px) {
-    .page-content-section__purchase-plan-section {
+    .page-content__section__purchase-plan-section {
         position: relative;
         display: block;
     }
-    .page-content-section__select-plan-btns .close-btn {
+    .page-content__section__select-plan-btns .close-btn {
         position: absolute;
         right: 20px;
         top: 10px;
@@ -302,6 +302,9 @@ Screen Size max-768
         width: 100%;
         margin: 0 0 10px 0;
     }
+    .modal__content.modal__content--manage-tags {
+        width: 80%;
+    }
 }
 /*
 ***************************************************************
@@ -312,10 +315,10 @@ Screen Size max-540
     .header__searchbar.searchbar {
         max-width: 260px;
     }
-    header.productPage__header .header__right__buttons {
+    header.page-content__section--product__header .header__right__buttons {
         margin-right: 20px;
     }
-    .pageTitle {
+    .page-content__title {
         padding: 0 20px;
     }
     .modal__body.settingPopup-body {
@@ -339,6 +342,16 @@ Screen Size max-540
     span.recommended__app__detail {
         white-space: unset;
     }
+    section.page-content {
+        width: 100%;
+    }
+    .modal__content.modal__content--manage-tags {
+        width: 100%;
+    }
+    .modal__content.modal__content--manage-tags .modal__body {
+        height: 100%;
+        overflow: auto;
+    }
 }
 /*
 ***************************************************************
@@ -346,16 +359,16 @@ Screen Size max-450
 ***************************************************************
 */
 @media (max-width: 450px) {
-    .page-content-section {
+    .page-content__section {
         padding: 0;
     }
-    .page-content-section__purchase-plan-section {
+    .page-content__section__purchase-plan-section {
         border-radius: 0;
     }
-    .page-content-section__purchase-plan-section p {
+    .page-content__section__purchase-plan-section p {
         width: 90%;
     }
-    .page-main-content-section {
+    .page-content__main {
         border-radius: 0;
     }
     header {
@@ -384,10 +397,10 @@ Screen Size max-450
     section.navigation-section {
         width: 80%;
     }
-    .page-content-section.innerpages {
+    .page-content__section.page-content__section--inner {
         padding: 30px 0;
     }
-    .pageTitle {
+    .page-content__title {
         padding: 0 20px;
     }
     .page-body {
@@ -396,23 +409,23 @@ Screen Size max-450
     .app__detail-section {
         width: 100%;
     }
-    .page-content-section.innerpages.productpage {
+    .page-content__section.page-content__section--inner.page-content__section--product {
         padding: 30px 0;
     }
-    .leftCol__card, .rightCol__card {
+    .column__card, .right-col__card {
         border-radius: 0;
     }
-    .form__group.smallgroup input {
+    .form-group.form-group--small input {
         padding-left: 35px;
         width: 70%;
     }
     input.disabled--input {
         width: 90% !important;
     }
-    .Col__card--body ul li svg {
+    .card__body ul li svg {
         right: 25px;
     }
-    .Col__card--body label span {
+    .card__body label span {
         right: 25px;
     }
     .modal__body.settingPopup-body {
