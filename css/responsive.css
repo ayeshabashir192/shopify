@@ -7,6 +7,26 @@ Created by Ayesha Bashir
 Screen Size max-1280px
 ***************************************************************
 */
+@media (max-width: 1620px) {
+    .modal__body.settingPopup-body {
+        width: 88%;
+    }
+}
+/*
+***************************************************************
+Screen Size max-1500px
+***************************************************************
+*/
+@media (max-width: 1500px) {
+    .modal__body.settingPopup-body {
+        width: 86%;
+    }
+}
+/*
+***************************************************************
+Screen Size max-1280px
+***************************************************************
+*/
 @media (max-width: 1280px) {
     ul.nav-bar li a, .nav__footer ul li button {
         letter-spacing: 1px;
@@ -25,7 +45,8 @@ Screen Size max-1280px
         margin: 100px 0 50px;
     }
     .modal__body.settingPopup-body {
-        height: 670px;
+        width: 88.5%;
+        height: 81%;
         padding: 20px 75px;
     }
     .modal-content.modal__content--manage-tags {
@@ -88,7 +109,8 @@ Screen Size max-1024px
     }
     .modal__body.settingPopup-body {
         padding: 20px 40px;
-        height: 480px;
+        width: 92.3%;
+        height: 72%;
     }
     .settingPopup-left-column {
         width: 25%;
@@ -116,13 +138,24 @@ Screen Size max-991px and min-860px
         height: 1240px;
     }
     .info__form-group .form-group select {
-        width: 96% !important;
+        width: 96%;
     }
     .store-info__row .info__form-group input {
-        width: 93% !important;
+        width: 93%;
     }
     .store-info__row.marBotton .info__form-group .form-group input {
-        width: 90% !important;
+        width: 90%;
+    }
+}
+
+/*
+***************************************************************
+Screen Size max-912
+***************************************************************
+*/
+@media (max-width: 912px) {
+    section.page-content {
+        width: 75%;
     }
 }
 
@@ -167,7 +200,16 @@ Screen Size max-860
         width: 75%;
     }
     .modal__body.settingPopup-body {
-        height: 1050px;
+        height: 81%;
+        width: 91%;
+    }
+}
+@media (max-width: 845px) {
+    section.navigation-section {
+        width: 25%;
+    }
+    section.page-content {
+        width: 75%;
     }
 }
 /*
@@ -293,7 +335,8 @@ Screen Size max-768
         display: block;
     }
     .modal__body.settingPopup-body {
-        height: 890px;
+        height: 81%;
+        width: 90%;
     }
     ul.apps-section__container.recommended-apps-container {
         display: block;
@@ -304,6 +347,9 @@ Screen Size max-768
     }
     .modal__content.modal__content--manage-tags {
         width: 80%;
+    }
+    section.page-content {
+        width: 100%;
     }
 }
 /*
@@ -322,8 +368,9 @@ Screen Size max-540
         padding: 0 20px;
     }
     .modal__body.settingPopup-body {
-        height: 625px;
-        padding: 30px 10px;
+        height: 74%;
+        width: 97%;
+        padding: 30px 20px;
     }
     .settingPopup-left-column {
         display: none;
@@ -420,7 +467,7 @@ Screen Size max-450
         width: 70%;
     }
     input.disabled--input {
-        width: 90% !important;
+        width: 90% ;
     }
     .card__body ul li svg {
         right: 25px;
@@ -442,7 +489,7 @@ Screen Size max-450
         border-radius: 0;
     }
     .store-info__row .info__form-group input {
-        width: 92% !important;
+        width: 92%;
     }
 }
 /*
@@ -452,9 +499,11 @@ Screen Size max-414
 */
 @media (max-width: 414px) {
     .modal__body.settingPopup-body {
-        height: 810px;
-    }
-
+        height: 50%;
+        width: 100%;    }
+}
+.store-info__row.marBotton .info__form-group .form-group input.input--custom {
+    width: 81%;
 }
 /*
 ***************************************************************
@@ -474,6 +523,9 @@ Screen Size max-360
 @media (max-width: 360px) {
     .modal__body.settingPopup-body {
         height: 660px;
+    }
+    .form-group.form-group--small {
+        width: 50%;
     }
 }
 /*

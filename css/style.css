@@ -790,7 +790,7 @@ top: 4%;
     padding: 20px;
 }
 .store-info__row .info__form-group input.input--custom {
-    width: 92% !important;
+    width: 92%  ;
 }
 .apps__section h3 {
     font-size: var(--font-size-regular);
@@ -856,7 +856,7 @@ span.app__category {
     width: 56px;
 }
 .app__detail-section a {
-    color: var(--color-text) !important;
+    color: var(--color-text)  ;
     cursor: pointer;
     font-size: var(--font-size-XS);
     font-weight: var(--font-weight-semibold);
@@ -968,17 +968,18 @@ Settings Popup Model Style
     background: var(--grey-bg-color);
     display: flex;
     padding: 20px 100px;
-    height: 100%;
+    height: 84%;
+    width: 86%;
 }
 .settingPopup-left-column {
     background: var(--white);
     border-radius: var(--border-radius-2);
     box-shadow: var(--box-shadow-lighter);
-    width: 22%;
+    width: 25%;
     height: fit-content;
 }
 .setting-popup__right-column {
-    width: 65%;
+    width: 75%;
     margin-left: 20px;
 }
 .settingPopup-navbar-header {
@@ -1034,7 +1035,15 @@ Settings Popup Model Style
     padding: 10px;
 }
 .settingPopup-navbar-body ul li.active {
-    border-left: var(--border-width-2) solid var(--color-primary);
+    position: relative;
+}
+.settingPopup-navbar-body ul li.active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -10px;
+    border-left: 3px solid var(--color-primary);
 }
 .setting-popup__page-heading h2 {
     font-size: var(--font-size-medium);
@@ -1103,7 +1112,7 @@ Settings Popup Model Style
     font-size: var(--font-size-XS);
 }
 .info__form-group input[type="email"], .info__form-group .form-group input{
-    width: 98% !important;
+    width: 97%  ;
 }
 .info__form-group .form-group select {
     padding: 10px;
@@ -1111,18 +1120,21 @@ Settings Popup Model Style
     border: var(--border-width-1) solid var(--color-border-input);
     border-radius: var(--border-radius-1);
     color: var(--color-text);
-    width: 99% !important;
+    width: 100%;
 }
 .info__form-group .form-group select:focus {
     border: var(--border-width-1) solid var(--color-border-input);
     outline: var(--border-width-2) solid var(--color-text-interactive);
     outline-offset: 1px;
 }
+.store-info__row .info__form-group:first-child {
+    margin-right: 7px;
+}
 .info__form-group .form-group input {
     margin-bottom: 5px;
 }
 .store-info__row .info__form-group .form-group select {
-    width: 97% !important;
+    width: 99%;
 }
 .setting-popup__content-card__body.editing-card {
     margin-top: -140px;
@@ -1139,7 +1151,7 @@ div#editBillingDetailCard {
     display: block;
 }
 .store-info__row .info__form-group input {
-    width: 93% !important;
+    width: 94%  ;
 }
 div#editBillingDetailCard .info__form-group {
     margin-bottom: 20px;
@@ -1207,7 +1219,7 @@ div#editCurrencyDetailCard .store-info__row:last-child {
     margin-bottom: 20px;
 }
 .store-info__row.marBotton .info__form-group .form-group input {
-    width: 93% !important;
+    width: 93%;
 }
 .page__actionBtn {
     text-align: right;
@@ -1231,7 +1243,7 @@ div#editCurrencyDetailCard .store-info__row:last-child {
 }
 .transfer-warning svg {
     fill: var(--color-icon-caution);
-    width: 20px !important;
+    width: 20px  ;
     float: left;
     margin-right: 10px;
 }
@@ -1242,10 +1254,10 @@ div#editCurrencyDetailCard .store-info__row:last-child {
     display: block;
 }
 .store-info__row .info__form-group.store-owner.left-col input {
-    width: 89% !important;
+    width: 89%  ;
 }
 .store-info__row .info__form-group.store-owner input{
-    width: 95% !important;
+    width: 95%  ;
 }
 .owner-authorities {
     margin: 20px 0;
@@ -2119,8 +2131,8 @@ button.media-button media-button--borderless {
 
 /*}*/
 input.disabled--input {
-    padding-left: 10px !important;
-    width: 95% !important;
+    padding-left: 10px  ;
+    width: 95%  ;
     background-color: var(--color-bg-subdued);
     border-radius: var(--border-radius-1);
     color: var(--color-text-subdued);
@@ -2152,8 +2164,8 @@ input.disabled--input {
     align-items: center;
 }
 .checkbox-div input {
-    width: 17px !important;
-    height: 17px !important;
+    width: 17px  ;
+    height: 17px  ;
     margin-right: 5px;
 }
 .searchbarDiv {
@@ -2265,7 +2277,7 @@ span.foundedTags {
     font-weight: var(--font-weight-regular);
 }
 .modal__body .form-group input {
-    width: 92%;
+    /*width: 92%;*/
     padding: 10px;
     background-color: var(--white);
     border: var(--border-width-1) solid var(--color-border-input);
@@ -2273,7 +2285,7 @@ span.foundedTags {
     color: var(--color-text);
 }
 .store-info__row.marBotton .info__form-group .form-group input {
-    width: 90% !important;
+    width: 90%  ;
 }
 .modal__body .form-group input:focus {
     border: var(--border-width-1) solid var(--color-border-input);
@@ -2303,7 +2315,7 @@ span.foundedTags {
     font-size: var(--font-size-small);
 }
 .store-info__row.marBotton .info__form-group .form-group input.input--custom {
-    width: 89% !important;
+    width: 89%  ;
 }
 .column__card.search-engine-listing__card {
     display: none;
@@ -2525,7 +2537,7 @@ p.info-text a {
     text-decoration: none;
 }
 .form-group.form-group--inventory input.input--custom {
-    width: 93% !important;
+    width: 93%  ;
 }
 .checkbox-group checkbox-group--extended {
     margin-bottom: 20px;
@@ -2559,11 +2571,11 @@ input#product-type:focus, input#digital-product:focus {
 }
 select {
     background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
-    background-position: calc(100% - 0.75rem) center !important;
-    -moz-appearance:none !important;
-    -webkit-appearance: none !important;
-    appearance: none !important;
-    padding-right: 2rem !important;
+    background-position: calc(100% - 0.75rem) center  ;
+    -moz-appearance:none  ;
+    -webkit-appearance: none  ;
+    appearance: none  ;
+    padding-right: 2rem  ;
 }
 .variant-box__add-btn p svg {
     fill: var(--color-link);
