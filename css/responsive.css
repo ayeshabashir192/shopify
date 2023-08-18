@@ -354,6 +354,19 @@ Screen Size max-768
 }
 /*
 ***************************************************************
+Screen Size max-560
+***************************************************************
+*/
+@media (max-width: 560px) {
+    header {
+        width: 93%;
+    }
+    select.custom-input {
+        width: 98.7%;
+    }
+}
+/*
+***************************************************************
 Screen Size max-540
 ***************************************************************
 */
@@ -500,11 +513,13 @@ Screen Size max-414
 @media (max-width: 414px) {
     .modal__body.settingPopup-body {
         height: 50%;
-        width: 100%;    }
+        width: 100%;
+    }
+    .store-info__row.marBotton .info__form-group .form-group input.input--custom {
+        width: 81%;
+    }
 }
-.store-info__row.marBotton .info__form-group .form-group input.input--custom {
-    width: 81%;
-}
+
 /*
 ***************************************************************
 Screen Size max-395

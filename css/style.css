@@ -789,9 +789,9 @@ top: 4%;
 .apps__section {
     padding: 20px;
 }
-.store-info__row .info__form-group input.input--custom {
-    width: 92%  ;
-}
+/*.store-info__row .info__form-group input.input--custom {*/
+/*    width: 92%  ;*/
+/*}*/
 .apps__section h3 {
     font-size: var(--font-size-regular);
     font-weight: var(--font-weight-semibold);
@@ -2285,7 +2285,7 @@ span.foundedTags {
     color: var(--color-text);
 }
 .store-info__row.marBotton .info__form-group .form-group input {
-    width: 90%  ;
+    width: 91%  ;
 }
 .modal__body .form-group input:focus {
     border: var(--border-width-1) solid var(--color-border-input);
@@ -2314,9 +2314,9 @@ span.foundedTags {
 .card__section-caption {
     font-size: var(--font-size-small);
 }
-.store-info__row.marBotton .info__form-group .form-group input.input--custom {
-    width: 89%  ;
-}
+/*.store-info__row.marBotton .info__form-group .form-group input.input--custom {*/
+/*    width: 89%  ;*/
+/*}*/
 .column__card.search-engine-listing__card {
     display: none;
     width: 100%;
