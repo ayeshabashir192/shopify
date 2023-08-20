@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<!--    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>-->
 </head>
 <body>
 <header>
@@ -1688,6 +1688,30 @@ Nested Accordion for Setup guide on home page
     }
     popup[0].click();
 </script>
+<script>
+    /*
+***************************************************************
+hide divs when click outside
+***************************************************************
+*/
+    document.addEventListener('mouseup', function(e) {
+        let notificationCard = document.getElementById('notificationCard');
+        if (!notificationCard.contains(e.target)) {
+            notificationCard.style.display = 'none';
+        }
 
+
+        let profileCard = document.getElementById('profileCard');
+        if (!profileCard.contains(e.target)) {
+            profileCard.style.display = 'none';
+        }
+
+
+        let searchbarCard = document.getElementById('searchbarCard');
+        if (!searchbarCard.contains(e.target)) {
+            searchbarCard.style.display = 'none';
+        }
+    });
+</script>
 </body>
 </html>

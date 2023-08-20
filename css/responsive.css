@@ -46,7 +46,7 @@ Screen Size max-1280px
     }
     .modal__body.settingPopup-body {
         width: 88.5%;
-        height: 81%;
+        height: 82%;
         padding: 20px 75px;
     }
     .modal-content.modal__content--manage-tags {
@@ -121,6 +121,9 @@ Screen Size max-1024px
     span.recommended__app__detail {
         white-space: unset;
     }
+    section.page-content {
+        width: 75%;
+    }
 }
 /*
 ***************************************************************
@@ -136,15 +139,6 @@ Screen Size max-991px and min-860px
     }
     .modal__body.settingPopup-body {
         height: 1240px;
-    }
-    .info__form-group .form-group select {
-        width: 96%;
-    }
-    .store-info__row .info__form-group input {
-        width: 93%;
-    }
-    .store-info__row.marBotton .info__form-group .form-group input {
-        width: 90%;
     }
 }
 
@@ -197,7 +191,6 @@ Screen Size max-860
     }
     .form-group.form-group--small input {
         padding-left: 35px;
-        width: 75%;
     }
     .modal__body.settingPopup-body {
         height: 81%;
@@ -412,6 +405,24 @@ Screen Size max-540
         height: 100%;
         overflow: auto;
     }
+    .store-info__row {
+        display: block;
+    }
+    .store-info__row .info__form-group:first-child {
+        margin-bottom: 20px;
+    }
+    .timeZone--options {
+        width: 100%;
+    }
+    .form-group.form-group--small {
+        width: 100%;
+    }
+    .form-groups {
+        display: block;
+    }
+    .checkbox-div {
+        margin-top: 20px;
+    }
 }
 /*
 ***************************************************************
@@ -477,7 +488,6 @@ Screen Size max-450
     }
     .form-group.form-group--small input {
         padding-left: 35px;
-        width: 70%;
     }
     input.disabled--input {
         width: 90% ;
@@ -501,9 +511,6 @@ Screen Size max-450
     .setting-popup__content-card {
         border-radius: 0;
     }
-    .store-info__row .info__form-group input {
-        width: 92%;
-    }
 }
 /*
 ***************************************************************
@@ -514,9 +521,6 @@ Screen Size max-414
     .modal__body.settingPopup-body {
         height: 50%;
         width: 100%;
-    }
-    .store-info__row.marBotton .info__form-group .form-group input.input--custom {
-        width: 81%;
     }
 }
 

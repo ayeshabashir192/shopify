@@ -968,8 +968,8 @@ Settings Popup Model Style
     background: var(--grey-bg-color);
     display: flex;
     padding: 20px 100px;
-    height: 84%;
-    width: 86%;
+    height: 88%;
+    width: 88%;
 }
 .settingPopup-left-column {
     background: var(--white);
@@ -1112,7 +1112,8 @@ Settings Popup Model Style
     font-size: var(--font-size-XS);
 }
 .info__form-group input[type="email"], .info__form-group .form-group input{
-    width: 97%  ;
+    box-sizing: border-box;
+    width: 100%;
 }
 .info__form-group .form-group select {
     padding: 10px;
@@ -1120,7 +1121,9 @@ Settings Popup Model Style
     border: var(--border-width-1) solid var(--color-border-input);
     border-radius: var(--border-radius-1);
     color: var(--color-text);
+    box-sizing: border-box;
     width: 100%;
+
 }
 .info__form-group .form-group select:focus {
     border: var(--border-width-1) solid var(--color-border-input);
@@ -1128,13 +1131,14 @@ Settings Popup Model Style
     outline-offset: 1px;
 }
 .store-info__row .info__form-group:first-child {
-    margin-right: 7px;
+    margin-right: 10px;
 }
 .info__form-group .form-group input {
     margin-bottom: 5px;
 }
 .store-info__row .info__form-group .form-group select {
-    width: 99%;
+    box-sizing: border-box;
+    width: 100%;
 }
 .setting-popup__content-card__body.editing-card {
     margin-top: -140px;
@@ -1151,7 +1155,8 @@ div#editBillingDetailCard {
     display: block;
 }
 .store-info__row .info__form-group input {
-    width: 94%  ;
+    box-sizing: border-box;
+    width: 100%;
 }
 div#editBillingDetailCard .info__form-group {
     margin-bottom: 20px;
@@ -1169,7 +1174,7 @@ div#editCurrencyDetailCard {
     color: var(--color-link);
     background: none;
     border: none;
-    width: 141px;
+    width: 145px;
 }
 .setting-popup__content-card__header.header-style--second {
     display: block;
@@ -1197,9 +1202,14 @@ div#editCurrencyDetailCard .store-info__row:last-child {
 .store-info__options {
     display: flex;
     align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.store-info__options .info__form-group {
+    width: 70%;
 }
 .store-info__options .info__form-group .form-group {
-    width: 80%;
+    width: 100%;
 }
 .timeZone--options {
     width: 70%;
@@ -1219,7 +1229,8 @@ div#editCurrencyDetailCard .store-info__row:last-child {
     margin-bottom: 20px;
 }
 .store-info__row.marBotton .info__form-group .form-group input {
-    width: 93%;
+    box-sizing: border-box;
+    width: 100%;
 }
 .page__actionBtn {
     text-align: right;
@@ -1254,11 +1265,12 @@ div#editCurrencyDetailCard .store-info__row:last-child {
     display: block;
 }
 .store-info__row .info__form-group.store-owner.left-col input {
-    width: 89%  ;
+    width: 100%;
+    box-sizing: border-box;
 }
-.store-info__row .info__form-group.store-owner input{
-    width: 95%  ;
-}
+/*.store-info__row .info__form-group.store-owner input{*/
+/*    width: 95%  ;*/
+/*}*/
 .owner-authorities {
     margin: 20px 0;
     color: var(--color-text-subdued);
@@ -1867,6 +1879,7 @@ button.page-title__back-btn:hover svg {
     border: var(--border-width-1) solid var(--color-border-input);
     border-radius: var(--border-radius-1);
     color: var(--color-text);
+    box-sizing: border-box;
 }
 hr{
     border-top: var(--border-width-1) solid var(--color-border-subdued);
@@ -1949,7 +1962,8 @@ ul.dropdown__items li:hover {
 }
 .form-group input {
     margin-top: 5px;
-    width: 96%;
+    box-sizing: border-box;
+    width: 100%;
 }
 .form-group {
     margin-bottom: 20px;
@@ -1973,7 +1987,7 @@ ul.dropdown__items li:hover {
     z-index: 1;
 }
 div#collectionOptionCard {
-    margin-top: -47px;
+    margin-top: -100px;
 }
 .card__vendor-option ul li:hover {
     background-color: var(--grey-bg-color);
@@ -2016,7 +2030,7 @@ div#cke_editor1{
 .media-options {
     position: relative;
     height: 120px;
-    width: 98%;
+    width: 100%;
     border: 1px dotted var(--color-border-input);
     border-radius: var(--border-radius-2);
 }
@@ -2086,7 +2100,8 @@ button.media-button media-button--borderless {
 }
 .form-group.form-group--small input {
     padding-left: 35px;
-    width: 80%;
+    width: 100%;
+    box-sizing: border-box;
 }
 .form-group.form-group--small svg {
     position: absolute;
@@ -2285,7 +2300,8 @@ span.foundedTags {
     color: var(--color-text);
 }
 .store-info__row.marBotton .info__form-group .form-group input {
-    width: 91%  ;
+    box-sizing: border-box;
+    width: 100%;
 }
 .modal__body .form-group input:focus {
     border: var(--border-width-1) solid var(--color-border-input);
@@ -2661,3 +2677,34 @@ ul.apps-section__container.recommended-apps-container {
     top: 10px;
     left: 8px;
 }
+ul.collection-types {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+ul.collection-types li {
+    list-style: none;
+    background-color: var(--grey-bg-color);
+    padding: 7px 12px;
+    margin-left: 0;
+    width: fit-content;
+    border-radius: var(--border-radius-2);
+    margin-right: 10px;
+}
+ul.collection-types li i {
+    margin-left: 5px;
+}
+input.custom-input {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<!--    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>-->
     <script src="ckeditor/ckeditor.js"></script>
 
 </head>
@@ -194,13 +194,12 @@
                         <div class="card__body" >
                             <div class="form-group">
                                 <label>Title</label>
-                                <input type="text" placeholder="Short sleeve t-shirt">
+                                <input type="text" placeholder="Short sleeve t-shirt" class="custom-input">
                             </div>
                             <div class="form-group">
                                 <label>Theme template</label>
                                 <textarea name="editor1" rows="3"></textarea>
                             </div>
-
                         </div>
                     </div>
                     <div class="column__card">
@@ -548,6 +547,10 @@
                             <div class="form-group">
                                 <label>Collections</label>
                                 <input type="text" onclick="collectionOption()">
+                                <ul class="collection-types">
+                                    <li>Home <i class="fa fa-close"></i></li>
+                                    <li>Home <i class="fa fa-close"></i></li>
+                                </ul>
                                 <p class="info-text">You haven’t created any collections yet.
                                     <a href="#">Create Collection</a>
                                 </p>
@@ -1771,6 +1774,67 @@ hide divs when click outside
         }
 
     });
+</script>
+<script>
+    /*
+***************************************************************
+Add Manage Tags popup model on Add Product Page
+***************************************************************
+*/
+    let manageTagModal = document.getElementById("manageTagsModal");
+
+    // Get the button that opens the modal
+    let manageTagBtn = document.getElementById("manageTags");
+
+    // Get the <span> element that closes the modal
+    let manageTagSpan = document.getElementsByClassName("close-two")[0];
+
+    // When the user clicks the button, open the modal
+    manageTagBtn.onclick = function () {
+        manageTagModal.style.display = "block";
+    }
+    // When the user clicks on <span> (x), close the modal
+    manageTagSpan.onclick = function () {
+        manageTagModal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == manageTagModal) {
+            manageTagModal.style.display = "none";
+        }
+    }
+
+
+
+    /*
+***************************************************************
+Add Manage Tags popup model on Add Product Page
+***************************************************************
+*/
+    let addUrlModal = document.getElementById("addUrlModal");
+
+    // Get the button that opens the modal
+    let addUrlBtn = document.getElementById("addUrl");
+
+    // Get the <span> element that closes the modal
+    let addUrlSpan = document.getElementsByClassName("close-three")[0];
+
+    // When the user clicks the button, open the modal
+    addUrlBtn.onclick = function () {
+        addUrlModal.style.display = "block";
+    }
+    // When the user clicks on <span> (x), close the modal
+    addUrlSpan.onclick = function () {
+        addUrlModal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == addUrlModal) {
+            addUrlModal.style.display = "none";
+        }
+    }
 </script>
 </body>
 </html>

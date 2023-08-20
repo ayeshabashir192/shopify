@@ -195,29 +195,6 @@ function addVarient() {
     }
 
 }
-/*
-***************************************************************
-hide divs when click outside
-***************************************************************
-*/
-document.addEventListener('mouseup', function(e) {
-    let notificationCard = document.getElementById('notificationCard');
-    if (!notificationCard.contains(e.target)) {
-        notificationCard.style.display = 'none';
-    }
-
-
-    let profileCard = document.getElementById('profileCard');
-    if (!profileCard.contains(e.target)) {
-        profileCard.style.display = 'none';
-    }
-
-
-    let searchbarCard = document.getElementById('searchbarCard');
-    if (!searchbarCard.contains(e.target)) {
-        searchbarCard.style.display = 'none';
-    }
-});
 
 /*
 ***************************************************************
@@ -309,64 +286,37 @@ window.onclick = function (event) {
 
 
 
-/*
-***************************************************************
-Add Manage Tags popup model on Add Product Page
-***************************************************************
-*/
-let manageTagModal = document.getElementById("manageTagsModal");
+// /*
+// ***************************************************************
+// Add Manage Tags popup model on Add Product Page
+// ***************************************************************
+// */
+// let manageTagModal = document.getElementById("manageTagsModal");
+//
+// // Get the button that opens the modal
+// let manageTagBtn = document.getElementById("manageTags");
+//
+// // Get the <span> element that closes the modal
+// let manageTagSpan = document.getElementsByClassName("close-two")[0];
+//
+// // When the user clicks the button, open the modal
+// manageTagBtn.onclick = function () {
+//     manageTagModal.style.display = "block";
+// }
+// // When the user clicks on <span> (x), close the modal
+// manageTagSpan.onclick = function () {
+//     manageTagModal.style.display = "none";
+// }
+//
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function (event) {
+//     if (event.target == manageTagModal) {
+//         manageTagModal.style.display = "none";
+//     }
+// }
 
-// Get the button that opens the modal
-let manageTagBtn = document.getElementById("manageTags");
-
-// Get the <span> element that closes the modal
-let manageTagSpan = document.getElementsByClassName("close-two")[0];
-
-// When the user clicks the button, open the modal
-manageTagBtn.onclick = function () {
-    manageTagModal.style.display = "block";
-}
-// When the user clicks on <span> (x), close the modal
-manageTagSpan.onclick = function () {
-    manageTagModal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == manageTagModal) {
-        manageTagModal.style.display = "none";
-    }
-}
 
 
-/*
-***************************************************************
-Add Manage Tags popup model on Add Product Page
-***************************************************************
-*/
-let addUrlModal = document.getElementById("addUrlModal");
-
-// Get the button that opens the modal
-let addUrlBtn = document.getElementById("addUrl");
-
-// Get the <span> element that closes the modal
-let addUrlSpan = document.getElementsByClassName("close-three")[0];
-
-// When the user clicks the button, open the modal
-addUrlBtn.onclick = function () {
-    addUrlModal.style.display = "block";
-}
-// When the user clicks on <span> (x), close the modal
-addUrlSpan.onclick = function () {
-    addUrlModal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == addUrlModal) {
-        addUrlModal.style.display = "none";
-    }
-}
 
 
 
