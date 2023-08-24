@@ -11,6 +11,7 @@
 <!--    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>-->
     <script src="ckeditor/ckeditor.js"></script>
 
+
 </head>
 <body>
 <header class="page-content__section--product__header">
@@ -416,7 +417,7 @@
                                         <input type="text" placeholder="Black" required>
                                     </div>
 
-                                    <button class="border__btn" onclick="variantTable()">Done</button>
+                                    <button class="border__btn">Done</button>
                                 </div>
                                 <div class="variant-box__delete" onclick="addVarient()">
                                     <svg viewBox="0 0 20 20" class="variant-box__icon-svg" focusable="false" aria-hidden="true"><path d="M11.5 8.25a.75.75 0 0 1 .75.75v4.25a.75.75 0 0 1-1.5 0v-4.25a.75.75 0 0 1 .75-.75Z"></path><path d="M9.25 9a.75.75 0 0 0-1.5 0v4.25a.75.75 0 0 0 1.5 0v-4.25Z"></path><path fill-rule="evenodd" d="M7.25 5.25a2.75 2.75 0 0 1 5.5 0h3a.75.75 0 0 1 0 1.5h-.75v5.45c0 1.68 0 2.52-.327 3.162a3 3 0 0 1-1.311 1.311c-.642.327-1.482.327-3.162.327h-.4c-1.68 0-2.52 0-3.162-.327a3 3 0 0 1-1.311-1.311c-.327-.642-.327-1.482-.327-3.162v-5.45h-.75a.75.75 0 0 1 0-1.5h3Zm1.5 0a1.25 1.25 0 1 1 2.5 0h-2.5Zm-2.25 1.5h7v5.45c0 .865-.001 1.423-.036 1.848-.033.408-.09.559-.128.633a1.5 1.5 0 0 1-.655.655c-.074.038-.225.095-.633.128-.425.035-.983.036-1.848.036h-.4c-.865 0-1.423-.001-1.848-.036-.408-.033-.559-.09-.633-.128a1.5 1.5 0 0 1-.656-.655c-.037-.074-.094-.225-.127-.633-.035-.425-.036-.983-.036-1.848v-5.45Z"></path></svg>
@@ -433,7 +434,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div id="variantTableCard" class="variant-table">
+                        <div class="variant-table">
                             <div class="variant-table__header">
                                 <ul>
                                     <li>Select</li>
@@ -443,60 +444,85 @@
                                 </ul>
                             </div>
                             <div class="variant-table__body">
+                                <!DOCTYPE html>
+                                <html>
+                                <head>
+                                    <style>
+                                        /* Overall table style */
+                                        .table-container {
+                                            width: 100%;
+                                            overflow-x: auto;
+                                        }
+
+                                        .custom-table {
+                                            border-collapse: collapse;
+                                            width: max-content; /* Set a width that fits the content */
+                                            min-width: 100%;   /* Minimum width to ensure scrolling */
+                                            border: 1px solid #ddd;
+                                            table-layout: fixed; /* Fix table layout to handle column widths */
+                                        }
+
+                                        /* Header cells style */
+                                        .custom-table th {
+                                            background-color: #f2f2f2;
+                                            text-align: left;
+                                            padding: 8px;
+                                        }
+
+                                        /* Fixed column style */
+                                        .fixed-columns {
+                                            position: sticky;
+                                            z-index: 1;
+                                            background-color: #f2f2f2;
+                                        }
+
+                                        /* Scrollable columns style */
+                                        .scrollable-columns {
+                                            overflow-x: auto;
+                                            width: 100%;
+                                        }
+
+                                        /* All cells style */
+                                        .custom-table td {
+                                            text-align: left;
+                                            padding: 8px;
+                                            border: 1px solid #ddd;
+                                        }
+
+                                        /* Style for the second fixed column */
+                                        .second-fixed-column {
+                                            position: sticky;
+                                            z-index: 1;
+                                            background-color: #f2f2f2;
+                                            left: 100px; /* Adjust this value to match the width of the first column */
+                                        }
+                                    </style>
+                                </head>
+                                <body>
+
                                 <div class="table-container">
                                     <table class="custom-table">
-                                        <thead>
                                         <tr>
-                                            <th class="fixed-columns"><input type="checkbox"></th>
-                                            <th class="second-fixed-column">Variant</th>
-                                            <th class="scrollable-columns">Price</th>
-                                            <th class="scrollable-columns">Available</th>
-                                            <th class="scrollable-columns">On hand</th>
-                                            <th class="scrollable-columns">SKU</th>
-                                            <th class="scrollable-columns">Barcode</th>
-                                            <th class="last-fixed-column"></th>
+                                            <th class="fixed-columns">First Name</th>
+                                            <th class="second-fixed-column">Last Name</th>
+                                            <th class="scrollable-columns">Points</th>
+                                            <th class="scrollable-columns">Points</th>
+                                            <th class="scrollable-columns">Points</th>
+                                            <th class="scrollable-columns">Points</th>
+                                            <th class="scrollable-columns">Points</th>
+                                            <th class="scrollable-columns">Points</th>
+                                            <th class="scrollable-columns">Points</th>
+                                            <th class="scrollable-columns">Points</th>
                                         </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th class="fixed-columns"><input type="checkbox"></th>
-                                                <th class="second-fixed-column">M / Black</th>
-                                                <th class="scrollable-columns">
-                                                    <div class="form-group">
-                                                        <input type="text">
-                                                    </div>
-                                                </th>
-                                                <th class="scrollable-columns">
-                                                    <div class="form-group">
-                                                        <input type="text">
-                                                    </div>
-                                                </th>
-                                                <th class="scrollable-columns">
-                                                    <div class="form-group">
-                                                        <input type="text">
-                                                    </div>
-                                                </th>
-                                                <th class="scrollable-columns">
-                                                    <div class="form-group">
-                                                        <input type="text">
-                                                    </div>
-                                                </th>
-                                                <th class="scrollable-columns">
-                                                    <div class="form-group">
-                                                        <input type="text">
-                                                    </div>
-                                                </th>
-                                                <th class="last-fixed-column">
-                                                    <div class="row-actions">
-                                                        <button>Edit</button>
-                                                        <button><i class="fa fa-trash-o"></i></button>
-                                                    </div>
-                                                </th>
-                                            </tr>
-                                        </tbody>
-
+                                        <!-- Your table rows... -->
                                     </table>
                                 </div>
+
+                                </body>
+                                </html>
+
+
+
                             </div>
                         </div>
                     </div>

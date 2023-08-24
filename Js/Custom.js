@@ -195,7 +195,21 @@ function addVarient() {
     }
 
 }
+/*
+***************************************************************
+hide/show Search Engine Listing Div on Add product page
+***************************************************************
+*/
 
+function variantTable() {
+    let a = document.getElementById("variantTableCard");
+    if (a.style.display === "block") {
+        a.style.display = "none";
+    } else {
+        a.style.display = "block";
+    }
+
+}
 /*
 ***************************************************************
 Close NotificationBar on click of close button on home page
